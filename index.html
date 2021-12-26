@@ -24,10 +24,10 @@
       --backgrd-clr-6: #e74c3c;
       --backgrd-clr-input-1: #fdebd0;
       --backgrd-clr-input-2: #d5f5e3;
-      /* NUMERO POSITIVOS O NEGATIVOS */
+      /* NUMERO POSITIVO O NEGATIVO */
       --num-positivo-clr: #239B56;
       --num-negativo-clr: #BA4A00;
-      /* FUENTES */
+      /* TEXTO FUENTES y COLORES */
       --text-clr-modal-1: #196f3d;
       --ff-num: 'Gochi Hand', cursive;
       --ff-text: 'Comfortaa', cursive;
@@ -305,6 +305,41 @@
       transition: all 0.4s ease-in;
 
     }
+
+    /* ///////////////////////// */
+    /* MODAL STYLES */
+
+    .modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      z-index: 10;
+      transition: 200ms ease-in-out;
+    }
+
+    .modal.active {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    #overlay {
+      position: fixed;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, .5);
+      pointer-events: none;
+      transition: 200ms ease-in-out;
+
+    }
+
+    #overlay.active {
+      opacity: 1;
+      pointer-events: all;
+      z-index: 9;
+    }
   </style>
 
 </head>
@@ -315,11 +350,13 @@
     <!-- PANTALLA PRINCIPAL -->
     <form class="general-presupuesto">
       <h3 class="presupuesto-titulo">Comida</h3>
-      <button class="btn btn-edit-title" id="ingreso-name"><i class="fas fa-pen"></i></button>
+      <button class="btn btn-edit-title" data-modal-target="#modal-title" id="ingreso-name"><i
+          class="fas fa-pen"></i></button>
       <p class="presupuesto-resto" id="main-presupuesto-resto">13000</p>
       <p class="presupuesto-base" id="main-presupuesto-base">22500</p>
-      <button class="btn btn-edit-base" id="ingreso-base"><i class="fas fa-pen"></i></button>
-      <button class="btn btn-shopping" id="nueva-compra">
+      <button class="btn btn-edit-base" data-modal-target="#modal-monto-base" id="ingreso-base"><i
+          class="fas fa-pen"></i></button>
+      <button class="btn btn-shopping" data-modal-target="#modal-compra-nueva" id="nueva-compra">
         <i class="fas fa-shopping-cart"></i>
       </button>
     </form>
@@ -328,7 +365,7 @@
   <!-- LISTA DE COMPRAS -->
   <div class="compras-container">
     <ul class="compras-list">
-      <div class="compra-nueva">
+      <!-- <div class="compra-nueva">
         <li class="compra-monto">1000</li>
         <li class="compra-item">chino</li>
         <button class="trash-btn"><i class="fas fa-trash"></i></button>
@@ -337,47 +374,46 @@
         <li class="compra-monto">2000</li>
         <li class="compra-item">compra 2</li>
         <button class="trash-btn"><i class="fas fa-trash"></i></button>
-      </div>
-
-
+      </div> -->
+      <div id="overlay"></div>
     </ul>
   </div>
   <!-- ////////////////////////// -->
   <!-- MODAL INGRESO NOMBRE -->
-  <div class="modal general-container modal-container">
+  <div class="modal general-container modal-container" id="modal-title">
     <form class="form-container">
       <input type="text" class="modal-input" value="Comida" title="Titulo" id="input-title" maxlength="15" />
-      <button class="btn modal-btn btn-margin-close" id="title-btn-close">
+      <button class="btn modal-btn btn-margin-close" data-close-button id="title-btn-close">
         <i class="fas fa-times"></i>
       </button>
-      <button class="btn modal-btn btn-margin-ok" id="title-btn-ok">
+      <button class="btn modal-btn btn-margin-ok" data-close-button id="title-btn-ok">
         <i class="fas fa-check"></i>
       </button>
     </form>
   </div>
   <!-- ////////////////////////// -->
   <!-- MODAL INGRESO MONTO BASE -->
-  <div class="modal general-container modal-container">
+  <div class="modal general-container modal-container" id="modal-monto-base">
     <form class="form-container">
       <input type="text" class="modal-input" value="30000" id="input-monto-base" maxlength="7" />
-      <button class="btn modal-btn btn-margin-close" id="base-btn-close">
+      <button class="btn modal-btn btn-margin-close" data-close-button id="base-btn-close">
         <i class="fas fa-times"></i>
       </button>
-      <button class="btn modal-btn btn-margin-ok" id="base-btn-ok">
+      <button class="btn modal-btn btn-margin-ok" data-close-button id="base-btn-ok">
         <i class="fas fa-check"></i>
       </button>
     </form>
   </div>
   <!-- ////////////////////////// -->
   <!-- MODAL INGRESO DE COMPRAS -->
-  <div class="modal general-container modal-container">
+  <div class="modal general-container modal-container" id="modal-compra-nueva">
     <form class="form-container">
       <input type="text" class="modal-input" value="item 3" id="input-compra-name" maxlength="20" />
       <input type="text" class="modal-input" value="3000" id="input-compra-monto" />
-      <button class="btn modal-btn btn-margin-close" id="compra-btn-close">
+      <button class="btn modal-btn btn-margin-close" data-close-button id="compra-btn-close">
         <i class="fas fa-times"></i>
       </button>
-      <button class="btn modal-btn btn-margin-ok" id="compra-btn-ok">
+      <button class="btn modal-btn btn-margin-ok" data-close-button id="compra-btn-ok">
         <i class="fas fa-check"></i>
       </button>
     </form>
@@ -409,21 +445,57 @@
     const compras_list = document.querySelector('.compras-list')
 
     /* /////////////////////////////// */
+    /* MODALS */
+    const openModalButtons = document.querySelectorAll('[data-modal-target]')
+    const closeModalButtons = document.querySelectorAll('[data-close-button]')
+    const overlay = document.querySelector('#overlay')
+
+    openModalButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget)
+        openModal(modal)
+      })
+    })
+
+    closeModalButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const modal = button.closest('.modal')
+        closeModal(modal)
+      })
+    })
+
+    function openModal(modal) {
+      event.preventDefault()
+      if (modal == null) return
+      modal.classList.add('active')
+      overlay.classList.add('active')
+    }
+
+    function closeModal(modal) {
+      event.preventDefault()
+      if (modal == null) return
+      modal.classList.remove('active')
+      overlay.classList.remove('active')
+    }
+
+    /* /////////////////////////////// */
     /* CHECKEAR QUE TODA LA PAGINA HAYA CARGADO PRIMERO */
     document.addEventListener('DOMContentLoaded', getCompras)
 
     /* /////////////////////////////// */
     /* EVENTS LISTENERS Y FUNCIONES*/
     /* MODAL TITULO */
-    title_btn_ok.onclick = () => {
+    title_btn_ok.addEventListener('click', () => {
       event.preventDefault()
       presupuesto_titulo.innerHTML = input_title.value
     }
+    )
     /* MODAL MONTO BASE */
-    base_btn_ok.onclick = () => {
+    base_btn_ok.addEventListener('click', () => {
       event.preventDefault()
       main_presupuesto_base.innerHTML = input_monto_base.value
     }
+    )
     /* MODAL NUEVA COMPRA */
     compra_btn_ok.onclick = () => {
       event.preventDefault()
@@ -474,7 +546,7 @@
         const compra = item.parentElement
         /* ADD ANIMATION */
         compra.classList.add('fall')
-        removeCompraLocal(compra)
+        // removeCompraLocal(compra)
         /* REMOVE ITEM */
         compra.addEventListener('transitionend', function () {
           compra.remove()
@@ -523,7 +595,7 @@
         compraNueva.classList.add('compra-nueva')
         // CREAR NUEVO LI MONTO
         const compraMonto = document.createElement('li')
-        compraMonto.innerText = compras[0][0]
+        compraMonto.innerText = compras[0][1]
         if (compraMonto.innerText > 0) {
           compraMonto.classList.add('numero-positivo')
         } else {
@@ -533,7 +605,7 @@
         compraNueva.appendChild(compraMonto)
         // CREAR NUEVO LI ITEM
         const compraItem = document.createElement('li')
-        compraItem.innerText = compras[0][1]
+        compraItem.innerText = compras[0][0]
         compraItem.classList.add('compra-item')
         compraNueva.appendChild(compraItem)
         // CREAR NUEVO TRASH BUTTON
