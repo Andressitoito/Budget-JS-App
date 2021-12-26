@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Control de Presupuesto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+    /* ///////////////////////// */
+    /* VARIABLES */
+    :root {
+      --backgrd-clr-1: #5db7f4;
+      --backgrd-clr-2: #77fe3d;
+      --backgrd-clr-3: #ccfb3f;
+      --backgrd-clr-4: #fbcc3f;
+      --backgrd-clr-5: #bafdf3;
+      /* BUTTONS */
+      --backgrd-clr-6: #e74c3c;
+      --backgrd-clr-input-1: #fdebd0;
+      --backgrd-clr-input-2: #d5f5e3;
+      /* NUMERO POSITIVOS O NEGATIVOS */
+      --num-positivo-clr: #239B56;
+      --num-negativo-clr: #BA4A00;
+      /* FUENTES */
+      --text-clr-modal-1: #196f3d;
+      --ff-num: 'Gochi Hand', cursive;
+      --ff-text: 'Comfortaa', cursive;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: linear-gradient(120deg,
+          var(--backgrd-clr-1),
+          var(--backgrd-clr-2));
+    }
+
+    /* ///////////////////////// */
+    /* CONTAINERS */
+    .general-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      min-width: 300px;
+      max-width: 350px;
+      margin: 2rem auto;
+      background-image: linear-gradient(120deg,
+          var(--backgrd-clr-2),
+          var(--backgrd-clr-1));
+      border-radius: 20px;
+      padding: 1em 1.5em 0em;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      font-family: var(--ff-text);
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-container {
+      padding: 1.5rem;
+    }
+
+    .form-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* ///////////////////////// */
+    /* BUTTON STYLES */
+    .btn {
+      font-size: 1.2rem;
+      padding: 0.5em;
+      border-radius: 50%;
+      border: none;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+    }
+
+    .btn-edit-title {
+      position: absolute;
+      top: 1rem;
+      right: 0.6rem;
+      background-image: linear-gradient(120deg,
+          var(--backgrd-clr-3),
+          var(--backgrd-clr-4));
+    }
+
+    .btn-edit-base {
+      position: absolute;
+      top: 6rem;
+      right: 0.6rem;
+      background-image: linear-gradient(120deg,
+          var(--backgrd-clr-3),
+          var(--backgrd-clr-4));
+    }
+
+    .modal-btn {
+      padding: 0.2em;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+
+    .btn-margin-ok {
+      color: #28b463;
+    }
+
+    .btn-margin-ok:hover {
+      color: #eafaf1;
+      background-color: #2ecc71;
+      transition: all 0.35s ease;
+    }
+
+    .btn-margin-close {
+      color: #e74c3c;
+    }
+
+    .btn-margin-close:hover {
+      color: #fdedec;
+      background-color: #ec7063;
+      transition: all 0.25s ease;
+    }
+
+    .btn-shopping {
+      font-size: 1.5rem;
+      padding: 0.25em 1em;
+      border-radius: 10px;
+      margin: 0.5em;
+      background-color: var(--backgrd-clr-2);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ///////////////////////// */
+    /* TITLE TEXT STYLES */
+    .presupuesto-titulo {
+      display: block;
+      background-image: linear-gradient(120deg,
+          var(--backgrd-clr-3),
+          var(--backgrd-clr-4));
+      padding: 0.4em 0.25em;
+      border-radius: 10px;
+      margin-bottom: 0.5em;
+      font-size: 1.3rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      /* text-transform: uppercase; */
+      width: 200px;
+      overflow: hidden;
+    }
+
+    .presupuesto-resto {
+      width: 70%;
+      background-image: linear-gradient(120deg,
+          var(--backgrd-clr-2),
+          var(--backgrd-clr-5));
+      padding: 0.3em;
+      border-radius: 10px;
+      font-family: var(--ff-text);
+      font-size: 2rem;
+      margin: 0 auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .presupuesto-base {
+      width: 40%;
+      background-image: linear-gradient(120deg,
+          var(--backgrd-clr-5),
+          var(--backgrd-clr-2));
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      font-family: var(--ff-text);
+      font-size: 1rem;
+      margin: 0 auto;
+    }
+
+    /* ///////////////////////// */
+    /* INPUTS GENERAL */
+    input {
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      padding: 0.25em;
+      text-align: center;
+      font-family: inherit;
+      font-weight: 900;
+      font-size: 1.5rem;
+      min-width: 200px;
+      width: 90%;
+      display: block;
+      margin: 0 auto 1rem;
+      background-image: linear-gradient(120deg,
+          var(--backgrd-clr-input-2),
+          var(--backgrd-clr-input-1));
+      color: var(--text-clr-modal-1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ///////////////////////// */
+    /* FONT ICONS ELIMINAR INTERACCION */
+    .fa-trash,
+    .fa-shopping-cart,
+    .fa-pen {
+      pointer-events: none;
+      /* para evitar que el dibujo interfiera en el clickeo */
+    }
+
+    /* ///////////////////////// */
+    /* ITEM COMPRA STYLES */
+    .compras-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      min-width: 250px;
+      max-width: 350px;
+      margin: .2rem auto;
+      background-image: linear-gradient(120deg,
+          var(--backgrd-clr-2),
+          var(--backgrd-clr-1));
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      font-family: var(--ff-text);
+      text-align: center;
+      padding: 1em;
+    }
+
+    .compras-list {
+      list-style: none;
+    }
+
+    .compra-nueva {
+      display: flex;
+      flex-direction: column;
+      padding: .25em;
+      background-image: linear-gradient(120deg,
+          var(--backgrd-clr-3),
+          var(--backgrd-clr-5));
+      border-radius: 10px;
+      margin: 2px;
+      position: relative;
+      text-align: center;
+      align-items: center;
+      width: 220px;
+    }
+
+    .compra-item {
+      width: 90%;
+      font-size: 1rem;
+      background-image: linear-gradient(120deg,
+          var(--backgrd-clr-5),
+          var(--backgrd-clr-2));
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .compra-monto {
+      font-size: 1.5rem;
+    }
+
+    .trash-btn {
+      border: none;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      font-size: 1.1rem;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: .3rem;
+      right: -3.3rem;
+      background-color: var(--backgrd-clr-4);
+    }
+
+    .trash-btn:hover {
+      color: #fdedec;
+      background-color: #ec7063;
+      transition: all 0.35s ease;
+    }
+
+    /* ///////////////////////// */
+    /* NUMEROS POSITIVOS O NEGATIVOS STYLES */
+    .numero-positivo {
+      color: var(--num-negativo-clr);
+    }
+
+    .numero-negativo {
+      color: var(--num-positivo-clr);
+    }
+
+    /* DELETED EFFECT */
+    .fall {
+      transform: translateX(-10rem) rotateY(90deg);
+      opacity: 0;
+      transition: all 0.4s ease-in;
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="general-container">
+    <!-- ////////////////////////// -->
+    <!-- PANTALLA PRINCIPAL -->
+    <form class="general-presupuesto">
+      <h3 class="presupuesto-titulo">Comida</h3>
+      <button class="btn btn-edit-title" id="ingreso-name"><i class="fas fa-pen"></i></button>
+      <p class="presupuesto-resto" id="main-presupuesto-resto">13000</p>
+      <p class="presupuesto-base" id="main-presupuesto-base">22500</p>
+      <button class="btn btn-edit-base" id="ingreso-base"><i class="fas fa-pen"></i></button>
+      <button class="btn btn-shopping" id="nueva-compra">
+        <i class="fas fa-shopping-cart"></i>
+      </button>
+    </form>
+  </div>
+  <!-- ////////////////////////// -->
+  <!-- LISTA DE COMPRAS -->
+  <div class="compras-container">
+    <ul class="compras-list">
+      <div class="compra-nueva">
+        <li class="compra-monto">1000</li>
+        <li class="compra-item">chino</li>
+        <button class="trash-btn"><i class="fas fa-trash"></i></button>
+      </div>
+      <div class="compra-nueva">
+        <li class="compra-monto">2000</li>
+        <li class="compra-item">compra 2</li>
+        <button class="trash-btn"><i class="fas fa-trash"></i></button>
+      </div>
+
+
+    </ul>
+  </div>
+  <!-- ////////////////////////// -->
+  <!-- MODAL INGRESO NOMBRE -->
+  <div class="modal general-container modal-container">
+    <form class="form-container">
+      <input type="text" class="modal-input" value="Comida" title="Titulo" id="input-title" maxlength="15" />
+      <button class="btn modal-btn btn-margin-close" id="title-btn-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="btn modal-btn btn-margin-ok" id="title-btn-ok">
+        <i class="fas fa-check"></i>
+      </button>
+    </form>
+  </div>
+  <!-- ////////////////////////// -->
+  <!-- MODAL INGRESO MONTO BASE -->
+  <div class="modal general-container modal-container">
+    <form class="form-container">
+      <input type="text" class="modal-input" value="30000" id="input-monto-base" maxlength="7" />
+      <button class="btn modal-btn btn-margin-close" id="base-btn-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="btn modal-btn btn-margin-ok" id="base-btn-ok">
+        <i class="fas fa-check"></i>
+      </button>
+    </form>
+  </div>
+  <!-- ////////////////////////// -->
+  <!-- MODAL INGRESO DE COMPRAS -->
+  <div class="modal general-container modal-container">
+    <form class="form-container">
+      <input type="text" class="modal-input" value="item 3" id="input-compra-name" maxlength="20" />
+      <input type="text" class="modal-input" value="3000" id="input-compra-monto" />
+      <button class="btn modal-btn btn-margin-close" id="compra-btn-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="btn modal-btn btn-margin-ok" id="compra-btn-ok">
+        <i class="fas fa-check"></i>
+      </button>
+    </form>
+  </div>
+  <script>
+
+    /* /////////////////////////////// */
+    /* SELECTORS */
+    /* SELECTORS PANTALLA PRINCIPAL*/
+    const presupuesto_titulo = document.querySelector('.presupuesto-titulo')
+    const ingreso_name = document.querySelector('#ingreso-name')
+    const main_presupuesto_resto = document.querySelector('#main-presupuesto-resto')
+    const main_presupuesto_base = document.querySelector('#main-presupuesto-base')
+    const ingreso_compras = document.querySelector('#ingreso-compras')
+    /* SELECTORS MODAL INGRESO NOMBRE */
+    const input_title = document.querySelector('#input-title')
+    const title_btn_ok = document.querySelector('#title-btn-ok')
+    const title_btn_close = document.querySelector('#title-btn-close')
+    /* SELECTORS MODAL INGRESO MAIN PRESUPUESTO BASE */
+    const input_monto_base = document.querySelector('#input-monto-base')
+    const base_btn_ok = document.querySelector('#base-btn-ok')
+    const base_btn_close = document.querySelector('#base-btn-close')
+    /* SELECTORS MODAL INGRESO NUEVA COMPRA */
+    const input_compra_name = document.querySelector('#input-compra-name')
+    const input_compra_monto = document.querySelector('#input-compra-monto')
+    const compra_btn_ok = document.querySelector('#compra-btn-ok')
+    const compra_btn_close = document.querySelector('#compra-btn-close')
+    /* COMPRAS-LIST */
+    const compras_list = document.querySelector('.compras-list')
+
+    /* /////////////////////////////// */
+    /* CHECKEAR QUE TODA LA PAGINA HAYA CARGADO PRIMERO */
+    document.addEventListener('DOMContentLoaded', getCompras)
+
+    /* /////////////////////////////// */
+    /* EVENTS LISTENERS Y FUNCIONES*/
+    /* MODAL TITULO */
+    title_btn_ok.onclick = () => {
+      event.preventDefault()
+      presupuesto_titulo.innerHTML = input_title.value
+    }
+    /* MODAL MONTO BASE */
+    base_btn_ok.onclick = () => {
+      event.preventDefault()
+      main_presupuesto_base.innerHTML = input_monto_base.value
+    }
+    /* MODAL NUEVA COMPRA */
+    compra_btn_ok.onclick = () => {
+      event.preventDefault()
+      // CORROBORAR QUE NO HAYA CAMPOS VACIOS
+      if (input_compra_name.value == '' || input_compra_monto.value == '') {
+        alert('No deje campos vacios')
+      } else if (isNaN(input_compra_monto.value)) {
+        alert('Valor incorrecto')
+      } else {
+        // CREAR NUEVA COMPRA
+        const compraNueva = document.createElement('div')
+        compraNueva.classList.add('compra-nueva')
+        // CREAR NUEVO LI MONTO
+        const compraMonto = document.createElement('li')
+        compraMonto.innerText = input_compra_monto.value
+        if (input_compra_monto.value > 0) {
+          compraMonto.classList.add('numero-positivo')
+        } else {
+          compraMonto.classList.add('numero-negativo')
+        }
+        compraMonto.classList.add('compra-monto')
+        compraNueva.appendChild(compraMonto)
+        // CREAR NUEVO LI ITEM
+        const compraItem = document.createElement('li')
+        compraItem.innerText = input_compra_name.value
+        compraItem.classList.add('compra-item')
+        compraNueva.appendChild(compraItem)
+        /* ///////////////////////// */
+        /* LOCAL STORAGE SAVE */
+        saveCompraLocal(input_compra_name.value, input_compra_monto.value)
+        // CREAR NUEVO TRASH BUTTON
+        const trashButton = document.createElement('button')
+        trashButton.innerHTML = '<i class="fas fa-trash"></i>'
+        trashButton.classList.add('trash-btn')
+        compraNueva.appendChild(trashButton)
+        // COMPRA NUEVA COMO NUEVO ITEM EN LA LISTA
+        compras_list.appendChild(compraNueva)
+      }
+    }
+
+    /* ///////////////////////// */
+    /* BORRAR COMPRAS */
+    /* BORRAR COSAS DEL CSS VISUALMENTE */
+    compras_list.addEventListener('click', deleteCompra)
+    function deleteCompra(event) {
+      const item = event.target
+      if (item.classList[0] === 'trash-btn') {
+        const compra = item.parentElement
+        /* ADD ANIMATION */
+        compra.classList.add('fall')
+        removeCompraLocal(compra)
+        /* REMOVE ITEM */
+        compra.addEventListener('transitionend', function () {
+          compra.remove()
+        })
+      }
+    }
+    /* BORRAR COSAS DEL CSS VISUALMENTE */
+    function removeCompraLocal(compra) {
+      let compras
+
+      if (localStorage.getItem('compras') === null) {
+        compras = []
+      } else {
+        compras = JSON.parse(localStorage.getItem('compras'))
+      }
+      // const compraIndex = compra
+      console.log(compra)
+      console.log(compras)
+    }
+
+    /* ///////////////////////// */
+    /* LOCAL STORAGE SAVE */
+    function saveCompraLocal(compra, monto) {
+      let compras
+
+      if (localStorage.getItem('compras') === null) {
+        compras = []
+      } else {
+        compras = JSON.parse(localStorage.getItem('compras'))
+      }
+      compras.push([compra, monto])
+      localStorage.setItem('compras', JSON.stringify(compras))
+    }
+
+    function getCompras() {
+      let compras
+
+      if (localStorage.getItem('compras') === null) {
+        compras = []
+      } else {
+        compras = JSON.parse(localStorage.getItem('compras'))
+      }
+      compras.forEach(function (compra, monto) {
+        // CREAR NUEVA COMPRA
+        const compraNueva = document.createElement('div')
+        compraNueva.classList.add('compra-nueva')
+        // CREAR NUEVO LI MONTO
+        const compraMonto = document.createElement('li')
+        compraMonto.innerText = compras[0][0]
+        if (compraMonto.innerText > 0) {
+          compraMonto.classList.add('numero-positivo')
+        } else {
+          compraMonto.classList.add('numero-negativo')
+        }
+        compraMonto.classList.add('compra-monto')
+        compraNueva.appendChild(compraMonto)
+        // CREAR NUEVO LI ITEM
+        const compraItem = document.createElement('li')
+        compraItem.innerText = compras[0][1]
+        compraItem.classList.add('compra-item')
+        compraNueva.appendChild(compraItem)
+        // CREAR NUEVO TRASH BUTTON
+        const trashButton = document.createElement('button')
+        trashButton.innerHTML = '<i class="fas fa-trash"></i>'
+        trashButton.classList.add('trash-btn')
+        compraNueva.appendChild(trashButton)
+        // COMPRA NUEVA COMO NUEVO ITEM EN LA LISTA
+        compras_list.appendChild(compraNueva)
+      })
+    }
+  </script>
+
+</body>
+
+</html>
