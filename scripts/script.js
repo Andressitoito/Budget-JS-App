@@ -33,6 +33,13 @@ $(document).ready(function () {
     const closeModalButtons = document.querySelectorAll('[data-close-button]')
     const overlay = document.querySelector('#overlay')
 
+    // $('[data-modal-target]').forEach(button => {
+    //     button.on('click', () =>{
+    //         const modal = document.querySelector(button.dataset.modalTarget)
+    //         openModal(modal)
+    //     })
+    // })
+    
     openModalButtons.forEach(button => {
         button.addEventListener('click', () => {
             const modal = document.querySelector(button.dataset.modalTarget)
@@ -92,7 +99,7 @@ $(document).ready(function () {
     /* /////////////////////////////// */
     /* EVENTS LISTENERS Y FUNCIONES*/
     /* MODAL TITULO */
-    $('#title-btn-ok').on('touchstart click', () => {
+    title_btn_ok.addEventListener('click', () => {
         event.preventDefault()
         presupuesto_titulo.innerHTML = input_title.value
     }
