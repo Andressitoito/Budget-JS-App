@@ -94,7 +94,26 @@ $(document).ready(function () {
         }
         $('.presupuesto-base')[0].innerHTML = montoBase
         monto_base = montoBase
+        resto = parseInt($('#main-presupuesto-resto')[0].innerText)
+
+        if (parseInt(resto) < 0) {
+            $('#main-presupuesto-resto').addClass('numero-negativo')
+            $('#main-presupuesto-resto').removeClass('numero-positivo')
+        } else {
+            $('#main-presupuesto-resto').addClass('numero-positivo')
+            $('#main-presupuesto-resto').removeClass('numero-negativo')
+        }
+        if (parseInt($('#main-gastado')[0].innerText) > 0) {
+            $('#main-gastado').addClass('numero-negativo')
+            $('#main-gastado').removeClass('numero-positivo')
+        } else {
+            $('#main-gastado').addClass('numero-positivo')
+            $('#main-gastado').removeClass('numero-negativo')
+        }
     }
+
+    console.log($('#main-presupuesto-resto')[0])
+    console.log(resto)
 
     /* /////////////////////////////// */
     /* EVENTS LISTENERS Y FUNCIONES*/
@@ -121,11 +140,31 @@ $(document).ready(function () {
             parseInt(compra[1])
             monto_actualizado += parseInt(compra[1])
         })
-
         $('#main-presupuesto-base')[0].innerText = $('#input-monto-base')[0].value
         $('#main-gastado')[0].innerText = monto_actualizado
         resto_actualizado = monto_base - monto_actualizado
         $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+
+        updateMonto()
+
+
+        if (parseInt(resto) < 0) {
+            $('#main-presupuesto-resto').addClass('numero-negativo')
+            $('#main-presupuesto-resto').removeClass('numero-positivo')
+        } else {
+            $('#main-presupuesto-resto').addClass('numero-positivo')
+            $('#main-presupuesto-resto').removeClass('numero-negativo')
+        }
+        if (parseInt($('#main-gastado')[0].innerText) > 0) {
+            $('#main-gastado').addClass('numero-negativo')
+            $('#main-gastado').removeClass('numero-positivo')
+        } else {
+            $('#main-gastado').addClass('numero-positivo')
+            $('#main-gastado').removeClass('numero-negativo')
+        }
+
+
+
     }
     )
 
@@ -144,7 +183,7 @@ $(document).ready(function () {
             // CREAR NUEVO LI MONTO
             const compraMonto = document.createElement('li')
             compraMonto.innerText = input_compra_monto.value
-            if (input_compra_monto.value > 0) {
+            if (input_compra_monto.value < 0) {
                 compraMonto.classList.add('numero-positivo')
             } else {
                 compraMonto.classList.add('numero-negativo')
@@ -171,6 +210,7 @@ $(document).ready(function () {
             input_compra_name.value = ''
             // ACTUALIZAR VISUALMENTE LA COMPRA
             updateMonto()
+
             let resto_actualizado
             let monto_actualizado = 0
             let compras
@@ -186,6 +226,25 @@ $(document).ready(function () {
             $('#main-gastado')[0].innerText = monto_actualizado
             resto_actualizado = monto_base - monto_actualizado
             $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+
+            updateMonto()
+
+            if (parseInt(resto) < 0) {
+                $('#main-presupuesto-resto').addClass('numero-negativo')
+                $('#main-presupuesto-resto').removeClass('numero-positivo')
+            } else {
+                $('#main-presupuesto-resto').addClass('numero-positivo')
+                $('#main-presupuesto-resto').removeClass('numero-negativo')
+            }
+            if (parseInt($('#main-gastado')[0].innerText) > 0) {
+                $('#main-gastado').addClass('numero-negativo')
+                $('#main-gastado').removeClass('numero-positivo')
+            } else {
+                $('#main-gastado').addClass('numero-positivo')
+                $('#main-gastado').removeClass('numero-negativo')
+            }
+
+
         }
     }
 
@@ -230,7 +289,7 @@ $(document).ready(function () {
             if (compras[j][1] == monto_compra_borrar && compras[j][0] == nombre_compra_borrar) {
                 console.log('hola')
                 break
-            } 
+            }
             i++
         }
         // compras.for(c => {
@@ -259,8 +318,27 @@ $(document).ready(function () {
         resto_actualizado = monto_base - monto_actualizado
         $('#main-presupuesto-resto')[0].innerText = resto_actualizado
 
-    }
+        updateMonto()
 
+        if (parseInt(resto) < 0) {
+            $('#main-presupuesto-resto').addClass('numero-negativo')
+            $('#main-presupuesto-resto').removeClass('numero-positivo')
+        } else {
+            $('#main-presupuesto-resto').addClass('numero-positivo')
+            $('#main-presupuesto-resto').removeClass('numero-negativo')
+        }
+        if (parseInt($('#main-gastado')[0].innerText) > 0) {
+            $('#main-gastado').addClass('numero-negativo')
+            $('#main-gastado').removeClass('numero-positivo')
+        } else {
+            $('#main-gastado').addClass('numero-positivo')
+            $('#main-gastado').removeClass('numero-negativo')
+        }
+
+
+
+    }
+    // console.log(parseInt($('#main-presupuesto-resto')[0].innerText))
 
 
 
@@ -295,7 +373,7 @@ $(document).ready(function () {
             // CREAR NUEVO LI MONTO
             const compraMonto = document.createElement('li')
             compraMonto.innerText = compra[1]
-            if (compraMonto.innerText > 0) {
+            if (compraMonto.innerText < 0) {
                 compraMonto.classList.add('numero-positivo')
             } else {
                 compraMonto.classList.add('numero-negativo')
@@ -314,6 +392,26 @@ $(document).ready(function () {
             compraNueva.appendChild(trashButton)
             // COMPRA NUEVA COMO NUEVO ITEM EN LA LISTA
             compras_list.appendChild(compraNueva)
+            updateMonto()
+
+
+
+            if (parseInt(resto) < 0) {
+                $('#main-presupuesto-resto').addClass('numero-negativo')
+                $('#main-presupuesto-resto').removeClass('numero-positivo')
+            } else {
+                $('#main-presupuesto-resto').addClass('numero-positivo')
+                $('#main-presupuesto-resto').removeClass('numero-negativo')
+            }
+            if (parseInt($('#main-gastado')[0].innerText) > 0) {
+                $('#main-gastado').addClass('numero-negativo')
+                $('#main-gastado').removeClass('numero-positivo')
+            } else {
+                $('#main-gastado').addClass('numero-positivo')
+                $('#main-gastado').removeClass('numero-negativo')
+            }
+
+
 
         })
 
@@ -330,6 +428,26 @@ $(document).ready(function () {
             montoBase = JSON.parse(localStorage.getItem('montoBase'))
         }
         $('#main-presupuesto-resto')[0].innerText = parseInt(montoBase - $('#main-gastado')[0].innerText)
+
+        updateMonto()
+
+        if (parseInt(resto) < 0) {
+            $('#main-presupuesto-resto').addClass('numero-negativo')
+            $('#main-presupuesto-resto').removeClass('numero-positivo')
+        } else {
+            $('#main-presupuesto-resto').addClass('numero-positivo')
+            $('#main-presupuesto-resto').removeClass('numero-negativo')
+        }
+        if (parseInt($('#main-gastado')[0].innerText) > 0) {
+            $('#main-gastado').addClass('numero-negativo')
+            $('#main-gastado').removeClass('numero-positivo')
+        } else {
+            $('#main-gastado').addClass('numero-positivo')
+            $('#main-gastado').removeClass('numero-negativo')
+        }
+
+
+
     }
 
 
@@ -373,6 +491,27 @@ $(document).ready(function () {
         }
         montoBase.push([monto])
         localStorage.setItem('montoBase', JSON.stringify(monto))
+
+
+        updateMonto()
+
+        if (parseInt(resto) < 0) {
+            $('#main-presupuesto-resto').addClass('numero-negativo')
+            $('#main-presupuesto-resto').removeClass('numero-positivo')
+        } else {
+            $('#main-presupuesto-resto').addClass('numero-positivo')
+            $('#main-presupuesto-resto').removeClass('numero-negativo')
+        }
+        if (parseInt($('#main-gastado')[0].innerText) > 0) {
+            $('#main-gastado').addClass('numero-negativo')
+            $('#main-gastado').removeClass('numero-positivo')
+        } else {
+            $('#main-gastado').addClass('numero-positivo')
+            $('#main-gastado').removeClass('numero-negativo')
+        }
+
+
+
     }
 
     $('#base-btn-ok').click(function () {

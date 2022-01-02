@@ -18,7 +18,7 @@
     --backgrd-clr-input-1: #fdebd0;
     --backgrd-clr-input-2: #d5f5e3;
     /* NUMERO POSITIVO O NEGATIVO */
-    --num-positivo-clr: #239B56;
+    --num-positivo-clr: #217c48;
     --num-negativo-clr: #BA4A00;
     /* TEXTO FUENTES y COLORES */
     --text-clr-modal-1: #196f3d;
@@ -45,8 +45,6 @@ body {
 
 
 /* ///////////////////////// */
-
-
 /* CONTAINERS */
 
 .general-container {
@@ -189,6 +187,12 @@ body {
     margin: 0 auto;
 }
 
+.presupuesto-base {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.1rem;
+}
+
 
 /* ///////////////////////// */
 
@@ -303,11 +307,11 @@ input {
 
 /* NUMEROS POSITIVOS O NEGATIVOS STYLES */
 
-.numero-positivo {
+.numero-negativo {
     color: var(--num-negativo-clr);
 }
 
-.numero-negativo {
+.numero-positivo {
     color: var(--num-positivo-clr);
 }
 
