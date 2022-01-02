@@ -39,7 +39,7 @@ $(document).ready(function () {
     //         openModal(modal)
     //     })
     // })
-    
+
     openModalButtons.forEach(button => {
         button.addEventListener('click', () => {
             const modal = document.querySelector(button.dataset.modalTarget)
@@ -216,31 +216,48 @@ $(document).ready(function () {
         } else {
             compras = JSON.parse(localStorage.getItem('compras'))
         }
-        const itemDel = event.target
-        const compraIndex = compras.indexOf(itemDel.parentElement.parentElement.children[0])
-        console.log(compras.indexOf(compra[0]))
-        console.log(compra.parentElement)
-        // console.log(compras.indexOf(itemDel.parentElement.parentElement.children[0]))
-        // console.log(compraIndex)
-        // compras.splice(compras.indexOf(compraIndex), 1)
-        // localStorage.setItem('compras', JSON.stringify(compras))
 
-        // console.log(compras)
-
-        // var index = compras.findIndex(obj => obj.name == itemDel);
-
-
-
-        let item1 = compras[0]
-        // let item2 = compras[1]
-        // let item3 = compras[2]
-        // console.log(item1)
-        // console.log(item2)
-        // console.log(item3)
+        console.log(compra.children[1].innerHTML)
+        let monto_compra_borrar = compra.children[0].innerHTML
+        let nombre_compra_borrar = compra.children[1].innerHTML
         console.log(compras)
+        let i = 0
 
+        for (let j = 0; j < compras.length; ++j) {
+            console.log('++++++++++++ ' + compras[j][0])
+            console.log('++++++++++++ ' + compras[j][1])
 
+            if (compras[j][1] == monto_compra_borrar && compras[j][0] == nombre_compra_borrar) {
+                console.log('hola')
+                break
+            } 
+            i++
+        }
+        // compras.for(c => {
+        //     console.log(c[1])
+        //     if (c[1] == monto_compra_borrar) {
+        //         i++
+        //         console.log('hola')
+        //     }
+        // })
+        compras.splice(i, 1)
+        localStorage.setItem('compras', JSON.stringify(compras))
 
+        updateMonto()
+        let resto_actualizado
+        let monto_actualizado = 0
+        if (localStorage.getItem('compras') === null) {
+            compras = []
+        } else {
+            compras = JSON.parse(localStorage.getItem('compras'))
+        }
+        compras.forEach(function (compra) {
+            parseInt(compra[1])
+            monto_actualizado += parseInt(compra[1])
+        })
+        $('#main-gastado')[0].innerText = monto_actualizado
+        resto_actualizado = monto_base - monto_actualizado
+        $('#main-presupuesto-resto')[0].innerText = resto_actualizado
 
     }
 
