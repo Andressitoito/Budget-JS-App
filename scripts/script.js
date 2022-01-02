@@ -126,44 +126,49 @@ $(document).ready(function () {
     /* MODAL MONTO BASE */
     base_btn_ok.addEventListener('click', () => {
         event.preventDefault()
-        updateMonto()
-        monto_base = parseInt(input_monto_base.value)
-        let resto_actualizado
-        let monto_actualizado = 0
-        let compras
-        if (localStorage.getItem('compras') === null) {
-            compras = []
-        } else {
-            compras = JSON.parse(localStorage.getItem('compras'))
-        }
-        compras.forEach(function (compra) {
-            parseInt(compra[1])
-            monto_actualizado += parseInt(compra[1])
-        })
-        $('#main-presupuesto-base')[0].innerText = $('#input-monto-base')[0].value
-        $('#main-gastado')[0].innerText = monto_actualizado
-        resto_actualizado = monto_base - monto_actualizado
-        $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+        // if (input_monto_base.value == '' || isNaN(input_monto_base.value)) {
+        //     alert('ingrese un numero valido')
+        //     monto_base = 0
+        // } else {}
+            updateMonto()
+            monto_base = parseInt(input_monto_base.value)
+            let resto_actualizado
+            let monto_actualizado = 0
+            let compras
+            if (localStorage.getItem('compras') === null) {
+                compras = []
+            } else {
+                compras = JSON.parse(localStorage.getItem('compras'))
+            }
+            compras.forEach(function (compra) {
+                parseInt(compra[1])
+                monto_actualizado += parseInt(compra[1])
+            })
+            $('#main-presupuesto-base')[0].innerText = $('#input-monto-base')[0].value
+            $('#main-gastado')[0].innerText = monto_actualizado
+            resto_actualizado = monto_base - monto_actualizado
+            $('#main-presupuesto-resto')[0].innerText = resto_actualizado
 
-        updateMonto()
-
-
-        if (parseInt(resto) < 0) {
-            $('#main-presupuesto-resto').addClass('numero-negativo')
-            $('#main-presupuesto-resto').removeClass('numero-positivo')
-        } else {
-            $('#main-presupuesto-resto').addClass('numero-positivo')
-            $('#main-presupuesto-resto').removeClass('numero-negativo')
-        }
-        if (parseInt($('#main-gastado')[0].innerText) > 0) {
-            $('#main-gastado').addClass('numero-negativo')
-            $('#main-gastado').removeClass('numero-positivo')
-        } else {
-            $('#main-gastado').addClass('numero-positivo')
-            $('#main-gastado').removeClass('numero-negativo')
-        }
+            updateMonto()
 
 
+            if (parseInt(resto) < 0) {
+                $('#main-presupuesto-resto').addClass('numero-negativo')
+                $('#main-presupuesto-resto').removeClass('numero-positivo')
+            } else {
+                $('#main-presupuesto-resto').addClass('numero-positivo')
+                $('#main-presupuesto-resto').removeClass('numero-negativo')
+            }
+            if (parseInt($('#main-gastado')[0].innerText) > 0) {
+                $('#main-gastado').addClass('numero-negativo')
+                $('#main-gastado').removeClass('numero-positivo')
+            } else {
+                $('#main-gastado').addClass('numero-positivo')
+                $('#main-gastado').removeClass('numero-negativo')
+            }
+
+
+       
 
     }
     )
@@ -283,11 +288,10 @@ $(document).ready(function () {
         let i = 0
 
         for (let j = 0; j < compras.length; ++j) {
-            console.log('++++++++++++ ' + compras[j][0])
-            console.log('++++++++++++ ' + compras[j][1])
+            // console.log('++++++++++++ ' + compras[j][0])
+            // console.log('++++++++++++ ' + compras[j][1])
 
             if (compras[j][1] == monto_compra_borrar && compras[j][0] == nombre_compra_borrar) {
-                console.log('hola')
                 break
             }
             i++
@@ -515,7 +519,11 @@ $(document).ready(function () {
     }
 
     $('#base-btn-ok').click(function () {
-        saveMontoBase($('#input-monto-base')[0].value)
+        if (input_monto_base.value == '' || isNaN(input_monto_base.value)) {
+            alert('ingrese un numero valido')
+        } else {
+            saveMontoBase($('#input-monto-base')[0].value)
+        }
     })
 
 })
