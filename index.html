@@ -29,13 +29,18 @@
 
       <p class="presupuesto-base" id="main-presupuesto-base">22500</p>
 
-      <button class="btn btn-edit-base" data-modal-target="#modal-monto-base" id="ingreso-base"><i
-          class="fas fa-pen"></i></button>
+      <button class="btn btn-edit-base" data-modal-target="#modal-monto-base" id="ingreso-base"><i class="fas fa-dollar-sign"></i></button>
       <button class="btn btn-shopping" data-modal-target="#modal-compra-nueva" id="nueva-compra">
         <i class="fas fa-shopping-cart"></i>
       </button>
+      <!-- ////////////////////////// -->
+      <!-- BOTONES DE SELECCION -->
+      <button class="btn btn-screens  screen-active" id="btn-screen-1"><i class="fas fa-drumstick-bite"></i></button>
+      <button class="btn btn-screens " id="btn-screen-2"><i class="fas fa-carrot"></i></button>
+      <button class="btn btn-screens" id="btn-screen-3"><i class="fas fa-pizza-slice"></i></button>
     </form>
   </div>
+
   <!-- ////////////////////////// -->
   <!-- LISTA DE COMPRAS -->
   <div class="compras-container">
@@ -47,11 +52,15 @@
   <!-- OVERLAY -->
   <div id="overlay"></div>
 
+
+
+
   <!-- ////////////////////////// -->
   <!-- MODAL INGRESO NOMBRE -->
   <div class="modal general-container modal-container" id="modal-title">
     <form class="form-container">
-      <input type="text" class="modal-input" placeholder="Ingrese titulo" title="Titulo" id="input-title" maxlength="15" />
+      <input type="text" class="modal-input" placeholder="Ingrese titulo" title="Titulo" id="input-title"
+        maxlength="15" />
       <button class="btn modal-btn btn-margin-close" data-close-button id="title-btn-close">
         <i class="fas fa-times"></i>
       </button>
@@ -60,17 +69,6 @@
       </button>
     </form>
   </div>
-
-  <!-- <div class="compra-nueva">
-      <li class="compra-monto">1000</li>
-      <li class="compra-item">chino</li>
-      <button class="trash-btn"><i class="fas fa-trash"></i></button>
-    </div>
-    <div class="compra-nueva">
-      <li class="compra-monto">2000</li>
-      <li class="compra-item">compra 2</li>
-      <button class="trash-btn"><i class="fas fa-trash"></i></button>
-    </div> -->
 
   <!-- ////////////////////////// -->
   <!-- MODAL INGRESO MONTO BASE -->
@@ -85,6 +83,7 @@
       </button>
     </form>
   </div>
+
   <!-- ////////////////////////// -->
   <!-- MODAL INGRESO DE COMPRAS -->
   <div class="modal general-container modal-container" id="modal-compra-nueva">
@@ -99,6 +98,22 @@
       </button>
     </form>
   </div>
+
+  <!-- ////////////////////////// -->
+  <!-- MODAL ELIMINAR COMPRAS -->
+  <div class="modal general-container modal-container" id="modal-eliminar-compra">
+    <form class="form-container">
+      <p class="eliminar-compra">Eliminar compra?</p>
+      <button class="btn modal-btn btn-margin-close" data-close-button id="eliminar-compra-btn-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="btn modal-btn btn-margin-ok" data-close-button id="eliminar-compra-btn-ok">
+        <i class="fas fa-check"></i>
+      </button>
+    </form>
+  </div>
+
+
   <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/slidicon" title="Slidicon">Slidicon</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
 </body>
 
