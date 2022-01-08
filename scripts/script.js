@@ -725,6 +725,28 @@ $(document).ready(function () {
         $('#main-gastado').removeClass('numero-negativo')
       }
 
+      // let compras
+      // compras = JSON.parse(localStorage.getItem('compras'))
+      // let montoTotal = 0
+
+      // compras.forEach(function (compra) {
+      //   montoTotal += parseInt(compra[1])
+      // })
+      // $('#main-gastado')[0].innerText = montoTotal
+      // let montoBase
+      // if (localStorage.getItem('montoBase') === null) {
+      //   montoBase = []
+      // } else {
+      //   montoBase = JSON.parse(localStorage.getItem('montoBase'))
+      // }
+
+      // let resto_actualizadoooo = parseInt(montoBase - $('#main-gastado')[0].innerText)
+      // console.log('------------- ' + resto_actualizadoooo)
+      // $('#main-presupuesto-resto')[0].innerText = resto_actualizadoooo
+
+
+        updateMonto()
+
       getCompras()
       location.reload();
     }
