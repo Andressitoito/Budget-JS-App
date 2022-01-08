@@ -72,28 +72,46 @@ $(document).ready(function () {
   /* DARLE CLASS ACTIVE A LA PANTALLA DESDE EL LOCAL STORAGE */
   /* ////////////////////////////////////////////////////////////////// */
 
-    function loadActiveScreen () {
-      activeScreen = JSON.parse(localStorage.getItem('activeScreen'))
-      console.log(activeScreen[0])
+  function loadActiveScreen() {
 
-      switch(true){
-        case activeScreen[0] == 'btn-screen-1':
+    let activeScreen = localStorage.getItem('activeScreen')
+
+    if (activeScreen === null) {
+      console.log('no existe active')
+      activeScreen = [['btn-screen-1']]
+      localStorage.setItem('activeScreen', JSON.stringify(activeScreen))
+    } else {
+      console.log('ya habia un active screen y es ')
+      console.log(JSON.parse(activeScreen)[0])
+
+      switch (true) {
+
+        case JSON.parse(activeScreen)[0] == 'btn-screen-1':
           $('#btn-screen-1').addClass('screen-active')
           $('#btn-screen-2').removeClass('screen-active')
           $('#btn-screen-3').removeClass('screen-active')
+          console.log('+++++++++ caso 1')
           break
-        case activeScreen[0] == 'btn-screen-2':
+        case JSON.parse(activeScreen)[0] == 'btn-screen-2':
           $('#btn-screen-1').removeClass('screen-active')
           $('#btn-screen-2').addClass('screen-active')
           $('#btn-screen-3').removeClass('screen-active')
+          console.log('+++++++++ caso 2')
+
           break
-        case activeScreen[0] == 'btn-screen-3':
+        case JSON.parse(activeScreen)[0] == 'btn-screen-3':
           $('#btn-screen-1').removeClass('screen-active')
           $('#btn-screen-2').removeClass('screen-active')
           $('#btn-screen-3').addClass('screen-active')
+          console.log('+++++++++ caso 3')
+
           break
+
+        default:
+          console.log('++++++++++ no entro a ninguno')
       }
     }
+  }
 
   /* ////////////////////////////////////////////////////////////////// */
   /* DARLE CLASS ACTIVE A LOS BOTONES */
@@ -174,10 +192,9 @@ $(document).ready(function () {
     updateTitle()
     updateMonto()
     getCompras()
-
+    location.reload();
 
   }
-
 
   document.querySelectorAll('.btn-screens').forEach(button => {
     button.onclick = buttonClicked;
@@ -709,6 +726,7 @@ $(document).ready(function () {
       }
 
       getCompras()
+      location.reload();
     }
   }
 
@@ -793,7 +811,7 @@ $(document).ready(function () {
         resto_actualizado = monto_base - monto_actualizado
         $('#main-presupuesto-resto')[0].innerText = resto_actualizado
 
-      break
+        break
 
 
 
@@ -821,7 +839,7 @@ $(document).ready(function () {
           }
           i2++
         }
-      
+
         compras2.splice(i2, 1)
         localStorage.setItem('compras2', JSON.stringify(compras2))
 
@@ -962,7 +980,7 @@ $(document).ready(function () {
   /* ////////////////////////////////////////////////////////////////// */
   /* LOCAL STORAGE GET COMPRAS */
   function getCompras() {
-    
+
     let montoTotal = 0
     switch (true) {
 
@@ -1050,8 +1068,8 @@ $(document).ready(function () {
           $('#main-gastado').addClass('numero-positivo')
           $('#main-gastado').removeClass('numero-negativo')
         }
-      
-      break
+
+        break
 
       case $('#btn-screen-2').hasClass('screen-active'):
         let compras2
