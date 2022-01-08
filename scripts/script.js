@@ -1014,6 +1014,7 @@ $(document).ready(function () {
         } else {
           compras = JSON.parse(localStorage.getItem('compras'))
         }
+        compras.reverse()
         compras.forEach(function (compra, monto) {
           // CREAR NUEVA COMPRA
           const compraNueva = document.createElement('div')
@@ -1062,6 +1063,7 @@ $(document).ready(function () {
 
         /* ////////////////////////////////////////////////////////////////// */
         /* LOCAL STORAGE REFRESH SUMA TOTAL Y RESTO  */
+        compras.reverse()
         compras.forEach(function (compra) {
           montoTotal += parseInt(compra[1])
         })
@@ -1100,6 +1102,7 @@ $(document).ready(function () {
         } else {
           compras2 = JSON.parse(localStorage.getItem('compras2'))
         }
+        compras2.reverse()
         compras2.forEach(function (compra, monto) {
           // CREAR NUEVA COMPRA
           const compraNueva = document.createElement('div')
@@ -1186,6 +1189,7 @@ $(document).ready(function () {
         } else {
           compras3 = JSON.parse(localStorage.getItem('compras3'))
         }
+        compras3.reverse()
         compras3.forEach(function (compra, monto) {
           // CREAR NUEVA COMPRA
           const compraNueva = document.createElement('div')

@@ -55,6 +55,7 @@ body {
   width: 40%;
   min-width: 300px;
   max-width: 350px;
+  height: 220px;
   margin: 0.5rem auto;
   background-image: linear-gradient(
     120deg,
