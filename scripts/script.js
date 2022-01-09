@@ -77,12 +77,9 @@ $(document).ready(function () {
     let activeScreen = localStorage.getItem('activeScreen')
 
     if (activeScreen === null) {
-      console.log('no existe active')
       activeScreen = [['btn-screen-1']]
       localStorage.setItem('activeScreen', JSON.stringify(activeScreen))
     } else {
-      console.log('ya habia un active screen y es ')
-      console.log(JSON.parse(activeScreen)[0])
 
       switch (true) {
 
@@ -90,20 +87,18 @@ $(document).ready(function () {
           $('#btn-screen-1').addClass('screen-active')
           $('#btn-screen-2').removeClass('screen-active')
           $('#btn-screen-3').removeClass('screen-active')
-          console.log('+++++++++ caso 1')
+
           break
         case JSON.parse(activeScreen)[0] == 'btn-screen-2':
           $('#btn-screen-1').removeClass('screen-active')
           $('#btn-screen-2').addClass('screen-active')
           $('#btn-screen-3').removeClass('screen-active')
-          console.log('+++++++++ caso 2')
 
           break
         case JSON.parse(activeScreen)[0] == 'btn-screen-3':
           $('#btn-screen-1').removeClass('screen-active')
           $('#btn-screen-2').removeClass('screen-active')
           $('#btn-screen-3').addClass('screen-active')
-          console.log('+++++++++ caso 3')
 
           break
 
@@ -188,17 +183,23 @@ $(document).ready(function () {
         break
 
     }
-
     updateTitle()
     updateMonto()
+    // let delList = document.querySelector('.compras-list')
+    // console.log(delList.children)
+    
+    // delList.children.remove()
+    $('.compras-list').empty()
     getCompras()
-    location.reload();
+    // location.reload();
 
   }
 
   document.querySelectorAll('.btn-screens').forEach(button => {
     button.onclick = buttonClicked;
   });
+
+
 
   /* ///////////////////////////////////////////////////////////////// */
   /* CHECKEAR QUE FUNCIONEN LOS BOTONES */
@@ -747,8 +748,9 @@ $(document).ready(function () {
 
         updateMonto()
 
+      $('.compras-list').empty()
+
       getCompras()
-      location.reload();
     }
   }
 
@@ -759,7 +761,6 @@ $(document).ready(function () {
   compras_list.addEventListener('click', deleteCompra)
 
   function deleteCompra(event) {
-    console.log('culoioio')
     const item = event.target
 
     if (item.classList[0] === 'trash-btn') {
