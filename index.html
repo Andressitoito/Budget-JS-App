@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Control de Presupuesto</title>
+  <title>BudgetApp JS </title>
   <link rel="shortcut icon" type="image/jpg" href="images/money-growth.png" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,47 +17,54 @@
 
 <body>
   <div class="general-container">
-    <!-- ////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////////// -->
     <!-- PANTALLA PRINCIPAL -->
+    <!-- /////////////////////////////////////////////////////////////// -->
     <form class="general-presupuesto">
-      <h3 class="presupuesto-titulo">ERROR</h3>
-      <button class="btn btn-edit-title" data-modal-target="#modal-title" id="ingreso-name"><i
-          class="fas fa-pen"></i></button>
-      <p class="presupuesto-resto" id="main-presupuesto-resto">13000</p>
+      <h3 class="presupuesto-titulo">
+        <-- Click</h3>
+          <button class="btn btn-edit-title" data-modal-target="#modal-title" id="ingreso-name"><i
+              class="fas fa-pen"></i></button>
 
-      <p class="presupuesto-gastado" id="main-gastado">0</p>
+          <p class="presupuesto-resto" id="main-presupuesto-resto">0</p>
+          <p class="presupuesto-gastado" id="main-gastado">0</p>
+          <p class="presupuesto-base" id="main-presupuesto-base">0</p>
 
-      <p class="presupuesto-base" id="main-presupuesto-base">22500</p>
+          <button class="btn btn-edit-base" data-modal-target="#modal-monto-base" id="ingreso-base"><i
+              class="fas fa-dollar-sign"></i></button>
+          <button class="btn btn-shopping" data-modal-target="#modal-compra-nueva" id="nueva-compra">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <button class="btn btn-delete-classlist" data-modal-target="#modal-eliminar-listado-compra"
+            id="ingreso-base"><i class="fas fa-dumpster-fire"></i></button>
 
-      <button class="btn btn-edit-base" data-modal-target="#modal-monto-base" id="ingreso-base"><i
-          class="fas fa-dollar-sign"></i></button>
-      <button class="btn btn-shopping" data-modal-target="#modal-compra-nueva" id="nueva-compra">
-        <i class="fas fa-shopping-cart"></i>
-      </button>
-      <!-- ////////////////////////// -->
-      <!-- BOTONES DE SELECCION -->
-
-      <button class="btn btn-screens " id="btn-screen-1"><i class="fas fa-drumstick-bite"></i></button>
-
-      <button class="btn btn-screens " id="btn-screen-2"><i class="fas fa-carrot"></i></button>
-
-      <button class="btn btn-screens" id="btn-screen-3"><i class="fas fa-pizza-slice"></i></button>
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- BOTONES DE SELECCION -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <button class="btn btn-screens" id="btn-screen-1"><i class="fas fa-drumstick-bite"></i></button>
+          <button class="btn btn-screens" id="btn-screen-2"><i class="fas fa-carrot"></i></button>
+          <button class="btn btn-screens" id="btn-screen-3"><i class="fas fa-pizza-slice"></i></button>
+          <button class="btn btn-screens" id="btn-screen-4"><i class="fab fa-apple"></i></button>
+          <button class="btn btn-screens" id="btn-screen-5"><i class="far fa-lemon"></i></button>
     </form>
   </div>
 
-  <!-- ////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <!-- LISTA DE COMPRAS -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <div class="compras-container">
     <ul class="compras-list">
     </ul>
   </div>
 
-  <!-- ////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <!-- OVERLAY -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <div id="overlay"></div>
 
-  <!-- ////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <!-- MODAL INGRESO NOMBRE -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <div class="modal general-container modal-container" id="modal-title">
     <form class="form-container">
       <input type="text" class="modal-input" placeholder="Ingrese titulo" title="Titulo" id="input-title"
@@ -71,8 +78,9 @@
     </form>
   </div>
 
-  <!-- ////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <!-- MODAL INGRESO MONTO BASE -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <div class="modal general-container modal-container" id="modal-monto-base">
     <form class="form-container">
       <input type="text" class="modal-input" placeholder="Ingrese monto base" id="input-monto-base" maxlength="7" />
@@ -85,8 +93,9 @@
     </form>
   </div>
 
-  <!-- ////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <!-- MODAL INGRESO DE COMPRAS -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <div class="modal general-container modal-container" id="modal-compra-nueva">
     <form class="form-container">
       <input type="text" class="modal-input" placeholder="ingrese producto" id="input-compra-name" maxlength="20" />
@@ -100,8 +109,9 @@
     </form>
   </div>
 
-  <!-- ////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <!-- MODAL ELIMINAR COMPRAS -->
+  <!-- /////////////////////////////////////////////////////////////// -->
   <div class="modal general-container modal-container" id="modal-eliminar-compra">
     <form class="form-container">
       <p class="eliminar-compra">Eliminar compra?</p>
@@ -114,6 +124,35 @@
     </form>
   </div>
 
+  <!-- /////////////////////////////////////////////////////////////// -->
+  <!-- MODAL ELIMINAR LISTADO COMPLETO DE COMPRAS -->
+  <!-- /////////////////////////////////////////////////////////////// -->
+  <div class="modal general-container modal-container" id="modal-eliminar-listado-compra">
+    <form class="form-container">
+      <p class="eliminar-compra">Desea eliminar el listado de compras?</p>
+      <button class="btn modal-btn btn-margin-close" data-close-button id="eliminar-listado-compra-btn-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="btn modal-btn btn-margin-ok" data-modal-target="#modal-eliminar-listado-compra-confirm" data-close-button id="eliminar-listado-compra-btn-ok">
+        <i class="fas fa-check"></i>
+      </button>
+    </form>
+  </div>
+
+<!-- /////////////////////////////////////////////////////////////// -->
+  <!-- MODAL CONFIRMACION DE ELIMINACION DE LISTADO COMPLETO DE COMPRAS -->
+  <!-- /////////////////////////////////////////////////////////////// -->
+  <div class="modal general-container modal-container" id="modal-eliminar-listado-compra-confirm">
+    <form class="form-container">
+      <p class="eliminar-compra-confirm">Confirma eliminacion?</p>
+      <button class="btn modal-btn btn-margin-close" data-close-button id="eliminar-listado-compra-btn-close-confirm">
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="btn modal-btn btn-margin-ok" data-close-button id="eliminar-listado-compra-btn-ok-confirm">
+        <i class="fas fa-check"></i>
+      </button>
+    </form>
+  </div>
 
   <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/slidicon" title="Slidicon">Slidicon</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
 </body>
