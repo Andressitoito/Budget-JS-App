@@ -341,7 +341,7 @@ $(document).ready(function () {
         localStorage.setItem('mainTitle3', JSON.stringify(title))
 
         break
-      case $('#btn-screen-3').hasClass('screen-active'):
+      case $('#btn-screen-4').hasClass('screen-active'):
 
         let mainTitle4;
         if (localStorage.getItem('mainTitle4') === null) {
