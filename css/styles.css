@@ -208,7 +208,7 @@ body {
 }
 
 .btn-screens:hover {
-  transition: all 0.5s ease;
+  transition: all 4s ease;
   color: var(--backgrd-clr-4);
   background-image: none;
   background-color: var(--backgrd-clr-7);
@@ -533,5 +533,4 @@ input {
   font-family: var(--ff-text);
   letter-spacing: 3px;
   color: var(--backgrd-clr-1);
-
 }
