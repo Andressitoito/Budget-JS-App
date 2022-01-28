@@ -122,7 +122,8 @@ body {
   height: 40px;
 }
 
-.btn-edit-base:hover, .btn-edit-title:hover{
+.btn-edit-base:hover,
+.btn-edit-title:hover {
   transition: all 0.5s ease;
   color: var(--backgrd-clr-4);
   background-image: none;
@@ -206,7 +207,7 @@ body {
   height: 38px;
 }
 
-.btn-screens:hover{
+.btn-screens:hover {
   transition: all 0.5s ease;
   color: var(--backgrd-clr-4);
   background-image: none;
@@ -499,7 +500,8 @@ input {
 /* MODAL ELIMINAR COMPRA */
 /* ////////////////////////////////////////////////////////////////// */
 
-.eliminar-compra, .eliminar-compra-confirm {
+.eliminar-compra,
+.eliminar-compra-confirm {
   display: block;
   width: 100%;
   padding: 1em;
@@ -514,8 +516,22 @@ input {
   color: rgb(71, 64, 71);
 }
 
-.eliminar-compra-confirm{
+.eliminar-compra-confirm {
   color: #ba4a00;
   font-weight: 600;
 }
 
+/* ////////////////////////////////////////////////////////////////// */
+/* VERSION ACTUAL */
+/* ////////////////////////////////////////////////////////////////// */
+
+.version-actual {
+  position: fixed;
+  top: 35em;
+  right: 1em;
+  padding: 0px;
+  font-family: var(--ff-text);
+  letter-spacing: 3px;
+  color: var(--backgrd-clr-1);
+
+}

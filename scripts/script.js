@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  console.log('Budget JS App v.2.0.3');
+  console.log('Budget JS App v.2.1.3');
 
   /* ////////////////////////////////////////////////////////////////// */
   /* SELECTORS */
@@ -1310,6 +1310,7 @@ $(document).ready(function () {
   $('#eliminar-listado-compra-btn-ok-confirm').on('click', () => {
 
     switch (true) {
+
       case $('#btn-screen-1').hasClass('screen-active'):
         let compras
         $('.compras-list').empty()
@@ -1321,6 +1322,8 @@ $(document).ready(function () {
         }
         compras = []
         localStorage.setItem('compras', JSON.stringify(compras))
+
+        break
 
       case $('#btn-screen-2').hasClass('screen-active'):
         let compras2
@@ -1334,6 +1337,8 @@ $(document).ready(function () {
         compras2 = []
         localStorage.setItem('compras2', JSON.stringify(compras2))
 
+        break
+
       case $('#btn-screen-3').hasClass('screen-active'):
         let compras3
         $('.compras-list').empty()
@@ -1345,6 +1350,8 @@ $(document).ready(function () {
         }
         compras3 = []
         localStorage.setItem('compras3', JSON.stringify(compras3))
+
+        break
 
       case $('#btn-screen-4').hasClass('screen-active'):
         let compras4
@@ -1358,6 +1365,8 @@ $(document).ready(function () {
         compras4 = []
         localStorage.setItem('compras4', JSON.stringify(compras4))
 
+        break
+
       case $('#btn-screen-5').hasClass('screen-active'):
         let compras5
         $('.compras-list').empty()
@@ -1369,6 +1378,9 @@ $(document).ready(function () {
         }
         compras5 = []
         localStorage.setItem('compras5', JSON.stringify(compras5))
+
+        break
+
     }
     getCompras()
   })
