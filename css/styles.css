@@ -490,6 +490,8 @@ input {
   opacity: 1;
   pointer-events: all;
   z-index: 9;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .none {
@@ -527,7 +529,7 @@ input {
 
 .version-actual {
   position: fixed;
-  top: 35em;
+  top: 39em;
   right: 1em;
   padding: 0px;
   font-family: var(--ff-text);
