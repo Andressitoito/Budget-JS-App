@@ -467,7 +467,7 @@ input {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   z-index: 10;
-  transition: 200ms ease-in-out;
+  /* transition: 50ms ease-in-out; */
 }
 
 .modal.active {
@@ -483,7 +483,7 @@ input {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
-  transition: 200ms ease-in-out;
+  /* transition: 200ms ease-in-out; */
 }
 
 #overlay.active {
