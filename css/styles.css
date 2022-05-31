@@ -36,11 +36,9 @@ html {
 }
 
 body {
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-1),
-    var(--backgrd-clr-2)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-1),
+      var(--backgrd-clr-2));
   background-position: center top;
   background-size: cover;
   height: 100vh;
@@ -59,11 +57,9 @@ body {
   max-width: 350px;
   height: 235px;
   margin: 0.5rem auto;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-2),
-    var(--backgrd-clr-1)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-2),
+      var(--backgrd-clr-1));
   border-radius: 30px;
   padding: 0em 1.5em 0em;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
@@ -99,11 +95,9 @@ body {
   position: absolute;
   top: 1rem;
   right: 0.6rem;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-3),
-    var(--backgrd-clr-4)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-3),
+      var(--backgrd-clr-4));
 }
 
 .btn-edit-base,
@@ -113,11 +107,9 @@ body {
   right: 0.6rem;
   font-size: 1.4rem;
   padding: 0.3em;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-3),
-    var(--backgrd-clr-4)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-3),
+      var(--backgrd-clr-4));
   width: 40px;
   height: 40px;
 }
@@ -132,21 +124,17 @@ body {
 
 .btn-delete-classlist {
   top: 11.4rem;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-3),
-    var(--backgrd-clr-6)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-3),
+      var(--backgrd-clr-6));
 }
 
 .btn-delete-classlist:hover {
   top: 11.4rem;
   transition: all 0.5s ease;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-6),
-    var(--backgrd-clr-3)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-6),
+      var(--backgrd-clr-3));
   color: red;
 }
 
@@ -197,11 +185,9 @@ body {
   position: absolute;
   padding: 0.3em;
   font-size: 1.5rem;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-3),
-    var(--backgrd-clr-4)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-3),
+      var(--backgrd-clr-4));
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   width: 38px;
   height: 38px;
@@ -213,6 +199,7 @@ body {
   background-image: none;
   background-color: var(--backgrd-clr-7);
 }
+
 /* ////////////////////////////////////////////////////////////////// */
 /* BUTTON POSITIONS */
 /* ////////////////////////////////////////////////////////////////// */
@@ -246,31 +233,58 @@ body {
   padding: 0;
 }
 
+/* PRIMER FILA */
+
+#btn-screen-6 {
+  top: 2.3rem;
+  left: -1.8rem;
+  font-size: 1.6rem;
+  padding: 0;
+}
+
+#btn-screen-7 {
+  top: 4.9rem;
+  left: -1.8rem;
+  font-size: 1.6rem;
+  padding: 0;
+}
+
+#btn-screen-8 {
+  top: 7.5rem;
+  left: -1.8rem;
+  font-size: 1.6rem;
+  padding: 0;
+}
+
+#btn-screen-9 {
+  top: 10.1rem;
+  left: -1.8rem;
+  font-size: 1.6rem;
+  padding: 0;
+}
+
 /* ////////////////////////////////////////////////////////////////// */
 /* SCREEN ACTIVE MODAL */
 /* ////////////////////////////////////////////////////////////////// */
 
 .screen-active {
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-2),
-    var(--backgrd-clr-4)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-2),
+      var(--backgrd-clr-4));
   box-shadow: -5px 5px 15px 1px #ffe488, -7px -5px 15px 1px #8cff85,
     2px -5px 15px 1px #80c7ff, 5px 5px 15px 1px rgba(0, 0, 0, 0);
   color: var(--backgrd-clr-7);
 }
+
 /* ////////////////////////////////////////////////////////////////// */
 /* TITLE TEXT STYLES */
 /* ////////////////////////////////////////////////////////////////// */
 
 .presupuesto-titulo {
   display: block;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-3),
-    var(--backgrd-clr-4)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-3),
+      var(--backgrd-clr-4));
   padding: 0.4em 0.25em;
   border-radius: 10px;
   margin-bottom: 0.5em;
@@ -283,11 +297,9 @@ body {
 
 .presupuesto-resto {
   width: 70%;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-2),
-    var(--backgrd-clr-5)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-2),
+      var(--backgrd-clr-5));
   padding: 0.3em;
   border-radius: 10px;
   font-family: var(--ff-text);
@@ -299,11 +311,9 @@ body {
 .presupuesto-base,
 .presupuesto-gastado {
   width: 40%;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-5),
-    var(--backgrd-clr-2)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-5),
+      var(--backgrd-clr-2));
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   font-family: var(--ff-text);
@@ -333,11 +343,9 @@ input {
   width: 90%;
   display: block;
   margin: 0 auto 1rem;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-input-2),
-    var(--backgrd-clr-input-1)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-input-2),
+      var(--backgrd-clr-input-1));
   color: var(--text-clr-modal-1);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
@@ -366,11 +374,9 @@ input {
   min-width: 250px;
   max-width: 350px;
   margin: 0.2rem auto;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-2),
-    var(--backgrd-clr-1)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-2),
+      var(--backgrd-clr-1));
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   font-family: var(--ff-text);
@@ -386,11 +392,9 @@ input {
   display: flex;
   flex-direction: column;
   padding: 0.25em;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-3),
-    var(--backgrd-clr-5)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-3),
+      var(--backgrd-clr-5));
   border-radius: 10px;
   margin: 2px;
   position: relative;
@@ -402,11 +406,9 @@ input {
 .compra-item {
   width: 90%;
   font-size: 1rem;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-5),
-    var(--backgrd-clr-2)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-5),
+      var(--backgrd-clr-2));
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -510,11 +512,9 @@ input {
   margin: 0px auto 1rem;
   font-size: 1.2rem;
   border-radius: 20px;
-  background-image: linear-gradient(
-    120deg,
-    var(--backgrd-clr-3),
-    var(--backgrd-clr-5)
-  );
+  background-image: linear-gradient(120deg,
+      var(--backgrd-clr-3),
+      var(--backgrd-clr-5));
   color: rgb(71, 64, 71);
 }
 
