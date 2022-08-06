@@ -93,6 +93,10 @@ $(document).ready(function () {
           $('#btn-screen-7').removeClass('screen-active')
           $('#btn-screen-8').removeClass('screen-active')
           $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
           break
 
         case JSON.parse(activeScreen)[0] == 'btn-screen-2':
@@ -105,6 +109,10 @@ $(document).ready(function () {
           $('#btn-screen-7').removeClass('screen-active')
           $('#btn-screen-8').removeClass('screen-active')
           $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
           break
 
         case JSON.parse(activeScreen)[0] == 'btn-screen-3':
@@ -117,6 +125,10 @@ $(document).ready(function () {
           $('#btn-screen-7').removeClass('screen-active')
           $('#btn-screen-8').removeClass('screen-active')
           $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
           break
 
         case JSON.parse(activeScreen)[0] == 'btn-screen-4':
@@ -129,6 +141,10 @@ $(document).ready(function () {
           $('#btn-screen-7').removeClass('screen-active')
           $('#btn-screen-8').removeClass('screen-active')
           $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
           break
 
         case JSON.parse(activeScreen)[0] == 'btn-screen-5':
@@ -141,6 +157,10 @@ $(document).ready(function () {
           $('#btn-screen-7').removeClass('screen-active')
           $('#btn-screen-8').removeClass('screen-active')
           $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
           break
 
         case JSON.parse(activeScreen)[0] == 'btn-screen-6':
@@ -153,6 +173,10 @@ $(document).ready(function () {
           $('#btn-screen-7').removeClass('screen-active')
           $('#btn-screen-8').removeClass('screen-active')
           $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
           break
 
         case JSON.parse(activeScreen)[0] == 'btn-screen-7':
@@ -165,6 +189,10 @@ $(document).ready(function () {
           $('#btn-screen-7').addClass('screen-active')
           $('#btn-screen-8').removeClass('screen-active')
           $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
           break
 
         case JSON.parse(activeScreen)[0] == 'btn-screen-8':
@@ -177,6 +205,10 @@ $(document).ready(function () {
           $('#btn-screen-7').removeClass('screen-active')
           $('#btn-screen-8').addClass('screen-active')
           $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
           break
 
         case JSON.parse(activeScreen)[0] == 'btn-screen-9':
@@ -189,6 +221,74 @@ $(document).ready(function () {
           $('#btn-screen-7').removeClass('screen-active')
           $('#btn-screen-8').removeClass('screen-active')
           $('#btn-screen-9').addClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
+          break
+
+        case JSON.parse(activeScreen)[0] == 'btn-screen-10':
+          $('#btn-screen-1').removeClass('screen-active')
+          $('#btn-screen-2').removeClass('screen-active')
+          $('#btn-screen-3').removeClass('screen-active')
+          $('#btn-screen-4').removeClass('screen-active')
+          $('#btn-screen-5').removeClass('screen-active')
+          $('#btn-screen-6').removeClass('screen-active')
+          $('#btn-screen-7').removeClass('screen-active')
+          $('#btn-screen-8').removeClass('screen-active')
+          $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').addClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
+          break
+
+        case JSON.parse(activeScreen)[0] == 'btn-screen-11':
+          $('#btn-screen-1').removeClass('screen-active')
+          $('#btn-screen-2').removeClass('screen-active')
+          $('#btn-screen-3').removeClass('screen-active')
+          $('#btn-screen-4').removeClass('screen-active')
+          $('#btn-screen-5').removeClass('screen-active')
+          $('#btn-screen-6').removeClass('screen-active')
+          $('#btn-screen-7').removeClass('screen-active')
+          $('#btn-screen-8').removeClass('screen-active')
+          $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').addClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
+          break
+
+        case JSON.parse(activeScreen)[0] == 'btn-screen-12':
+          $('#btn-screen-1').removeClass('screen-active')
+          $('#btn-screen-2').removeClass('screen-active')
+          $('#btn-screen-3').removeClass('screen-active')
+          $('#btn-screen-4').removeClass('screen-active')
+          $('#btn-screen-5').removeClass('screen-active')
+          $('#btn-screen-6').removeClass('screen-active')
+          $('#btn-screen-7').removeClass('screen-active')
+          $('#btn-screen-8').removeClass('screen-active')
+          $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').addClass('screen-active')
+          $('#btn-screen-13').removeClass('screen-active')
+          break
+
+        case JSON.parse(activeScreen)[0] == 'btn-screen-13':
+          $('#btn-screen-1').removeClass('screen-active')
+          $('#btn-screen-2').removeClass('screen-active')
+          $('#btn-screen-3').removeClass('screen-active')
+          $('#btn-screen-4').removeClass('screen-active')
+          $('#btn-screen-5').removeClass('screen-active')
+          $('#btn-screen-6').removeClass('screen-active')
+          $('#btn-screen-7').removeClass('screen-active')
+          $('#btn-screen-8').removeClass('screen-active')
+          $('#btn-screen-9').removeClass('screen-active')
+          $('#btn-screen-10').removeClass('screen-active')
+          $('#btn-screen-11').removeClass('screen-active')
+          $('#btn-screen-12').removeClass('screen-active')
+          $('#btn-screen-13').addClass('screen-active')
           break
 
         default:
@@ -435,6 +535,18 @@ $(document).ready(function () {
       case $('#btn-screen-9').hasClass('screen-active'):
         console.log('btn-9 tiene')
         break
+      case $('#btn-screen-10').hasClass('screen-active'):
+        console.log('btn-10 tiene')
+        break
+      case $('#btn-screen-11').hasClass('screen-active'):
+        console.log('btn-11 tiene')
+        break
+      case $('#btn-screen-12').hasClass('screen-active'):
+        console.log('btn-12 tiene')
+        break
+      case $('#btn-screen-13').hasClass('screen-active'):
+        console.log('btn-13 tiene')
+        break
     }
   }
   checkClass()
@@ -615,6 +727,83 @@ $(document).ready(function () {
         localStorage.setItem('mainTitle9', JSON.stringify(title))
 
         break
+
+      case $('#btn-screen-10').hasClass('screen-active'):
+
+        let mainTitle10;
+        if (localStorage.getItem('mainTitle10') === null) {
+          mainTitle10 = []
+        } else {
+          mainTitle10 = JSON.parse(localStorage.getItem('mainTitle10'))
+        }
+        localStorage.removeItem('mainTitle10')
+        if (localStorage.getItem('mainTitle10') === null) {
+          mainTitle10 = []
+        } else {
+          mainTitle10 = JSON.parse(localStorage.getItem('mainTitle10'))
+        }
+        mainTitle10.push([title])
+        localStorage.setItem('mainTitle10', JSON.stringify(title))
+
+        break
+
+      case $('#btn-screen-11').hasClass('screen-active'):
+
+        let mainTitle11;
+        if (localStorage.getItem('mainTitle11') === null) {
+          mainTitle11 = []
+        } else {
+          mainTitle11 = JSON.parse(localStorage.getItem('mainTitle11'))
+        }
+        localStorage.removeItem('mainTitle11')
+        if (localStorage.getItem('mainTitle11') === null) {
+          mainTitle11 = []
+        } else {
+          mainTitle11 = JSON.parse(localStorage.getItem('mainTitle11'))
+        }
+        mainTitle11.push([title])
+        localStorage.setItem('mainTitle11', JSON.stringify(title))
+
+        break
+
+      case $('#btn-screen-12').hasClass('screen-active'):
+
+        let mainTitle12;
+        if (localStorage.getItem('mainTitle12') === null) {
+          mainTitle12 = []
+        } else {
+          mainTitle12 = JSON.parse(localStorage.getItem('mainTitle12'))
+        }
+        localStorage.removeItem('mainTitle12')
+        if (localStorage.getItem('mainTitle12') === null) {
+          mainTitle12 = []
+        } else {
+          mainTitle12 = JSON.parse(localStorage.getItem('mainTitle12'))
+        }
+        mainTitle12.push([title])
+        localStorage.setItem('mainTitle12', JSON.stringify(title))
+
+        break
+
+      case $('#btn-screen-13').hasClass('screen-active'):
+
+        let mainTitle13;
+        if (localStorage.getItem('mainTitle13') === null) {
+          mainTitle13 = []
+        } else {
+          mainTitle13 = JSON.parse(localStorage.getItem('mainTitle13'))
+        }
+        localStorage.removeItem('mainTitle13')
+        if (localStorage.getItem('mainTitle13') === null) {
+          mainTitle13 = []
+        } else {
+          mainTitle13 = JSON.parse(localStorage.getItem('mainTitle13'))
+        }
+        mainTitle13.push([title])
+        localStorage.setItem('mainTitle13', JSON.stringify(title))
+
+        break
+
     }
   }
   // }
@@ -729,6 +918,50 @@ $(document).ready(function () {
           mainTitle9 = JSON.parse(localStorage.getItem('mainTitle9'))
         }
         $('.presupuesto-titulo')[0].innerHTML = mainTitle9
+        break
+
+      case $('#btn-screen-10').hasClass('screen-active'):
+
+        let mainTitle10;
+        if (localStorage.getItem('mainTitle10') === null) {
+          mainTitle10 = []
+        } else {
+          mainTitle10 = JSON.parse(localStorage.getItem('mainTitle10'))
+        }
+        $('.presupuesto-titulo')[0].innerHTML = mainTitle10
+        break
+
+      case $('#btn-screen-11').hasClass('screen-active'):
+
+        let mainTitle11;
+        if (localStorage.getItem('mainTitle11') === null) {
+          mainTitle11 = []
+        } else {
+          mainTitle11 = JSON.parse(localStorage.getItem('mainTitle11'))
+        }
+        $('.presupuesto-titulo')[0].innerHTML = mainTitle11
+        break
+
+      case $('#btn-screen-12').hasClass('screen-active'):
+
+        let mainTitle12;
+        if (localStorage.getItem('mainTitle12') === null) {
+          mainTitle12 = []
+        } else {
+          mainTitle12 = JSON.parse(localStorage.getItem('mainTitle12'))
+        }
+        $('.presupuesto-titulo')[0].innerHTML = mainTitle12
+        break
+
+      case $('#btn-screen-13').hasClass('screen-active'):
+
+        let mainTitle13;
+        if (localStorage.getItem('mainTitle13') === null) {
+          mainTitle13 = []
+        } else {
+          mainTitle13 = JSON.parse(localStorage.getItem('mainTitle13'))
+        }
+        $('.presupuesto-titulo')[0].innerHTML = mainTitle13
         break
     }
   }
@@ -911,6 +1144,82 @@ $(document).ready(function () {
 
         break
 
+      case $('#btn-screen-10').hasClass('screen-active'):
+
+        let montoBase10;
+        if (localStorage.getItem('montoBase10') === null) {
+          montoBase10 = []
+        } else {
+          montoBase10 = JSON.parse(localStorage.getItem('montoBase10'))
+        }
+        localStorage.removeItem('montoBase10')
+        if (localStorage.getItem('montoBase10') === null) {
+          montoBase10 = []
+        } else {
+          montoBase10 = JSON.parse(localStorage.getItem('montoBase10'))
+        }
+        montoBase10.push([monto])
+        localStorage.setItem('montoBase10', JSON.stringify(monto))
+
+        break
+
+      case $('#btn-screen-11').hasClass('screen-active'):
+
+        let montoBase11;
+        if (localStorage.getItem('montoBase11') === null) {
+          montoBase11 = []
+        } else {
+          montoBase11 = JSON.parse(localStorage.getItem('montoBase11'))
+        }
+        localStorage.removeItem('montoBase11')
+        if (localStorage.getItem('montoBase11') === null) {
+          montoBase11 = []
+        } else {
+          montoBase11 = JSON.parse(localStorage.getItem('montoBase11'))
+        }
+        montoBase11.push([monto])
+        localStorage.setItem('montoBase11', JSON.stringify(monto))
+
+        break
+
+      case $('#btn-screen-12').hasClass('screen-active'):
+
+        let montoBase12;
+        if (localStorage.getItem('montoBase12') === null) {
+          montoBase12 = []
+        } else {
+          montoBase12 = JSON.parse(localStorage.getItem('montoBase12'))
+        }
+        localStorage.removeItem('montoBase12')
+        if (localStorage.getItem('montoBase12') === null) {
+          montoBase12 = []
+        } else {
+          montoBase12 = JSON.parse(localStorage.getItem('montoBase12'))
+        }
+        montoBase12.push([monto])
+        localStorage.setItem('montoBase12', JSON.stringify(monto))
+
+        break
+
+      case $('#btn-screen-13').hasClass('screen-active'):
+
+        let montoBase13;
+        if (localStorage.getItem('montoBase13') === null) {
+          montoBase13 = []
+        } else {
+          montoBase13 = JSON.parse(localStorage.getItem('montoBase13'))
+        }
+        localStorage.removeItem('montoBase13')
+        if (localStorage.getItem('montoBase13') === null) {
+          montoBase13 = []
+        } else {
+          montoBase13 = JSON.parse(localStorage.getItem('montoBase13'))
+        }
+        montoBase13.push([monto])
+        localStorage.setItem('montoBase13', JSON.stringify(monto))
+
+        break
+
     }
 
     updateMonto()
@@ -1068,6 +1377,62 @@ $(document).ready(function () {
         }
         $('.presupuesto-base')[0].innerHTML = montoBase9
         monto_base = montoBase9
+        resto = parseInt($('#main-presupuesto-resto')[0].innerText)
+
+        break
+
+      case $('#btn-screen-10').hasClass('screen-active'):
+
+        let montoBase10;
+        if (localStorage.getItem('montoBase10') === null) {
+          montoBase10 = []
+        } else {
+          montoBase10 = JSON.parse(localStorage.getItem('montoBase10'))
+        }
+        $('.presupuesto-base')[0].innerHTML = montoBase10
+        monto_base = montoBase10
+        resto = parseInt($('#main-presupuesto-resto')[0].innerText)
+
+        break
+
+      case $('#btn-screen-11').hasClass('screen-active'):
+
+        let montoBase11;
+        if (localStorage.getItem('montoBase11') === null) {
+          montoBase11 = []
+        } else {
+          montoBase11 = JSON.parse(localStorage.getItem('montoBase11'))
+        }
+        $('.presupuesto-base')[0].innerHTML = montoBase11
+        monto_base = montoBase11
+        resto = parseInt($('#main-presupuesto-resto')[0].innerText)
+
+        break
+
+      case $('#btn-screen-12').hasClass('screen-active'):
+
+        let montoBase12;
+        if (localStorage.getItem('montoBase12') === null) {
+          montoBase12 = []
+        } else {
+          montoBase12 = JSON.parse(localStorage.getItem('montoBase12'))
+        }
+        $('.presupuesto-base')[0].innerHTML = montoBase12
+        monto_base = montoBase12
+        resto = parseInt($('#main-presupuesto-resto')[0].innerText)
+
+        break
+
+      case $('#btn-screen-13').hasClass('screen-active'):
+
+        let montoBase13;
+        if (localStorage.getItem('montoBase13') === null) {
+          montoBase13 = []
+        } else {
+          montoBase13 = JSON.parse(localStorage.getItem('montoBase13'))
+        }
+        $('.presupuesto-base')[0].innerHTML = montoBase13
+        monto_base = montoBase13
         resto = parseInt($('#main-presupuesto-resto')[0].innerText)
 
         break
@@ -1310,6 +1675,94 @@ $(document).ready(function () {
 
         break
 
+      case $('#btn-screen-10').hasClass('screen-active'):
+
+        let compras10
+        console.log('asdasdas')
+        monto_base = parseInt(input_monto_base.value)
+        if (localStorage.getItem('compras10') === null) {
+          compras10 = []
+        } else {
+          compras10 = JSON.parse(localStorage.getItem('compras10'))
+        }
+        compras10.forEach(function (compra) {
+          parseInt(compra[1])
+          monto_actualizado += parseInt(compra[1])
+        })
+        $('#main-presupuesto-base')[0].innerText = $('#input-monto-base')[0].value
+        $('#main-gastado')[0].innerText = monto_actualizado
+        resto_actualizado = monto_base - monto_actualizado
+        $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+        $('#input-monto-base')[0].value = ''
+
+        break
+
+      case $('#btn-screen-11').hasClass('screen-active'):
+
+        let compras11
+        console.log('asdasdas')
+        monto_base = parseInt(input_monto_base.value)
+        if (localStorage.getItem('compras11') === null) {
+          compras11 = []
+        } else {
+          compras11 = JSON.parse(localStorage.getItem('compras11'))
+        }
+        compras11.forEach(function (compra) {
+          parseInt(compra[1])
+          monto_actualizado += parseInt(compra[1])
+        })
+        $('#main-presupuesto-base')[0].innerText = $('#input-monto-base')[0].value
+        $('#main-gastado')[0].innerText = monto_actualizado
+        resto_actualizado = monto_base - monto_actualizado
+        $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+        $('#input-monto-base')[0].value = ''
+
+        break
+
+      case $('#btn-screen-12').hasClass('screen-active'):
+
+        let compras12
+        console.log('asdasdas')
+        monto_base = parseInt(input_monto_base.value)
+        if (localStorage.getItem('compras12') === null) {
+          compras12 = []
+        } else {
+          compras12 = JSON.parse(localStorage.getItem('compras12'))
+        }
+        compras12.forEach(function (compra) {
+          parseInt(compra[1])
+          monto_actualizado += parseInt(compra[1])
+        })
+        $('#main-presupuesto-base')[0].innerText = $('#input-monto-base')[0].value
+        $('#main-gastado')[0].innerText = monto_actualizado
+        resto_actualizado = monto_base - monto_actualizado
+        $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+        $('#input-monto-base')[0].value = ''
+
+        break
+
+      case $('#btn-screen-13').hasClass('screen-active'):
+
+        let compras13
+        console.log('asdasdas')
+        monto_base = parseInt(input_monto_base.value)
+        if (localStorage.getItem('compras13') === null) {
+          compras13 = []
+        } else {
+          compras13 = JSON.parse(localStorage.getItem('compras13'))
+        }
+        compras13.forEach(function (compra) {
+          parseInt(compra[1])
+          monto_actualizado += parseInt(compra[1])
+        })
+        $('#main-presupuesto-base')[0].innerText = $('#input-monto-base')[0].value
+        $('#main-gastado')[0].innerText = monto_actualizado
+        resto_actualizado = monto_base - monto_actualizado
+        $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+        $('#input-monto-base')[0].value = ''
+
+        break
+
     }
 
     updateMonto()
@@ -1483,7 +1936,6 @@ $(document).ready(function () {
 
           break
 
-
         case $('#btn-screen-6').hasClass('screen-active'):
 
           let compras6
@@ -1524,7 +1976,6 @@ $(document).ready(function () {
 
           break
 
-
         case $('#btn-screen-8').hasClass('screen-active'):
 
           let compras8
@@ -1555,6 +2006,86 @@ $(document).ready(function () {
             compras9 = JSON.parse(localStorage.getItem('compras9'))
           }
           compras9.forEach(function (compra) {
+            parseInt(compra[1])
+            monto_actualizado += parseInt(compra[1])
+          })
+          $('#main-presupuesto-base')[0].innerText = $('#input-monto-base')[0].value
+          $('#main-gastado')[0].innerText = monto_actualizado
+          resto_actualizado = monto_base - monto_actualizado
+          $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+
+          break
+
+        case $('#btn-screen-10').hasClass('screen-active'):
+
+          let compras10
+          monto_base = parseInt(input_monto_base.value)
+          if (localStorage.getItem('compras10') === null) {
+            compras10 = []
+          } else {
+            compras10 = JSON.parse(localStorage.getItem('compras10'))
+          }
+          compras10.forEach(function (compra) {
+            parseInt(compra[1])
+            monto_actualizado += parseInt(compra[1])
+          })
+          $('#main-presupuesto-base')[0].innerText = $('#input-monto-base')[0].value
+          $('#main-gastado')[0].innerText = monto_actualizado
+          resto_actualizado = monto_base - monto_actualizado
+          $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+
+          break
+
+        case $('#btn-screen-11').hasClass('screen-active'):
+
+          let compras11
+          monto_base = parseInt(input_monto_base.value)
+          if (localStorage.getItem('compras11') === null) {
+            compras11 = []
+          } else {
+            compras11 = JSON.parse(localStorage.getItem('compras11'))
+          }
+          compras11.forEach(function (compra) {
+            parseInt(compra[1])
+            monto_actualizado += parseInt(compra[1])
+          })
+          $('#main-presupuesto-base')[0].innerText = $('#input-monto-base')[0].value
+          $('#main-gastado')[0].innerText = monto_actualizado
+          resto_actualizado = monto_base - monto_actualizado
+          $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+
+          break
+
+        case $('#btn-screen-12').hasClass('screen-active'):
+
+          let compras12
+          monto_base = parseInt(input_monto_base.value)
+          if (localStorage.getItem('compras12') === null) {
+            compras12 = []
+          } else {
+            compras12 = JSON.parse(localStorage.getItem('compras12'))
+          }
+          compras12.forEach(function (compra) {
+            parseInt(compra[1])
+            monto_actualizado += parseInt(compra[1])
+          })
+          $('#main-presupuesto-base')[0].innerText = $('#input-monto-base')[0].value
+          $('#main-gastado')[0].innerText = monto_actualizado
+          resto_actualizado = monto_base - monto_actualizado
+          $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+
+          break
+
+        case $('#btn-screen-13').hasClass('screen-active'):
+
+          let compras13
+          monto_base = parseInt(input_monto_base.value)
+          if (localStorage.getItem('compras13') === null) {
+            compras13 = []
+          } else {
+            compras13 = JSON.parse(localStorage.getItem('compras13'))
+          }
+          compras13.forEach(function (compra) {
             parseInt(compra[1])
             monto_actualizado += parseInt(compra[1])
           })
@@ -2054,6 +2585,187 @@ $(document).ready(function () {
 
         break
 
+      case $('#btn-screen-10').hasClass('screen-active'):
+
+        let compras10
+
+        if (localStorage.getItem('compras10') === null) {
+          compras10 = []
+        } else {
+          compras10 = JSON.parse(localStorage.getItem('compras10'))
+        }
+
+        // console.log(compra.children[1].innerHTML)
+        let monto_compra_borrar10 = compra.children[0].innerHTML
+        let nombre_compra_borrar10 = compra.children[1].innerHTML
+        let i10 = 0
+
+        for (let j = 0; j < compras10.length; ++j) {
+          // console.log('++++++++++++ ' + compras[j][0])
+          // console.log('++++++++++++ ' + compras[j][1])
+
+          if (compras10[j][1] == monto_compra_borrar10 && compras10[j][0] == nombre_compra_borrar10) {
+            break
+          }
+          i10++
+        }
+
+        compras10.splice(i10, 1)
+        localStorage.setItem('compras10', JSON.stringify(compras10))
+
+        updateMonto()
+
+        if (localStorage.getItem('compras10') === null) {
+          compras10 = []
+        } else {
+          compras10 = JSON.parse(localStorage.getItem('compras10'))
+        }
+        compras10.forEach(function (compra) {
+          parseInt(compra[1])
+          monto_actualizado += parseInt(compra[1])
+        })
+        $('#main-gastado')[0].innerText = monto_actualizado
+        resto_actualizado = monto_base - monto_actualizado
+        $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+
+        break
+
+      case $('#btn-screen-11').hasClass('screen-active'):
+
+        let compras11
+
+        if (localStorage.getItem('compras11') === null) {
+          compras11 = []
+        } else {
+          compras11 = JSON.parse(localStorage.getItem('compras11'))
+        }
+
+        // console.log(compra.children[1].innerHTML)
+        let monto_compra_borrar11 = compra.children[0].innerHTML
+        let nombre_compra_borrar11 = compra.children[1].innerHTML
+        let i11 = 0
+
+        for (let j = 0; j < compras11.length; ++j) {
+          // console.log('++++++++++++ ' + compras[j][0])
+          // console.log('++++++++++++ ' + compras[j][1])
+
+          if (compras11[j][1] == monto_compra_borrar11 && compras11[j][0] == nombre_compra_borrar11) {
+            break
+          }
+          i11++
+        }
+
+        compras9.splice(i11, 1)
+        localStorage.setItem('compras11', JSON.stringify(compras11))
+
+        updateMonto()
+
+        if (localStorage.getItem('compras11') === null) {
+          compras11 = []
+        } else {
+          compras11 = JSON.parse(localStorage.getItem('compras11'))
+        }
+        compras11.forEach(function (compra) {
+          parseInt(compra[1])
+          monto_actualizado += parseInt(compra[1])
+        })
+        $('#main-gastado')[0].innerText = monto_actualizado
+        resto_actualizado = monto_base - monto_actualizado
+        $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+
+        break
+
+      case $('#btn-screen-12').hasClass('screen-active'):
+
+        let compras12
+
+        if (localStorage.getItem('compras12') === null) {
+          compras12 = []
+        } else {
+          compras12 = JSON.parse(localStorage.getItem('compras12'))
+        }
+
+        // console.log(compra.children[1].innerHTML)
+        let monto_compra_borrar12 = compra.children[0].innerHTML
+        let nombre_compra_borrar12 = compra.children[1].innerHTML
+        let i12 = 0
+
+        for (let j = 0; j < compras12.length; ++j) {
+          // console.log('++++++++++++ ' + compras[j][0])
+          // console.log('++++++++++++ ' + compras[j][1])
+
+          if (compras12[j][1] == monto_compra_borrar12 && compras12[j][0] == nombre_compra_borrar12) {
+            break
+          }
+          i12++
+        }
+
+        compras12.splice(i12, 1)
+        localStorage.setItem('compras12', JSON.stringify(compras12))
+
+        updateMonto()
+
+        if (localStorage.getItem('compras12') === null) {
+          compras12 = []
+        } else {
+          compras12 = JSON.parse(localStorage.getItem('compras12'))
+        }
+        compras12.forEach(function (compra) {
+          parseInt(compra[1])
+          monto_actualizado += parseInt(compra[1])
+        })
+        $('#main-gastado')[0].innerText = monto_actualizado
+        resto_actualizado = monto_base - monto_actualizado
+        $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+
+        break
+
+      case $('#btn-screen-13').hasClass('screen-active'):
+
+        let compras13
+
+        if (localStorage.getItem('compras13') === null) {
+          compras13 = []
+        } else {
+          compras13 = JSON.parse(localStorage.getItem('compras13'))
+        }
+
+        // console.log(compra.children[1].innerHTML)
+        let monto_compra_borrar13 = compra.children[0].innerHTML
+        let nombre_compra_borrar13 = compra.children[1].innerHTML
+        let i13 = 0
+
+        for (let j = 0; j < compras13.length; ++j) {
+          // console.log('++++++++++++ ' + compras[j][0])
+          // console.log('++++++++++++ ' + compras[j][1])
+
+          if (compras13[j][1] == monto_compra_borrar13 && compras13[j][0] == nombre_compra_borrar13) {
+            break
+          }
+          i13++
+        }
+
+        compras13.splice(i13, 1)
+        localStorage.setItem('compras13', JSON.stringify(compras13))
+
+        updateMonto()
+
+        if (localStorage.getItem('compras13') === null) {
+          compras13 = []
+        } else {
+          compras13 = JSON.parse(localStorage.getItem('compras13'))
+        }
+        compras13.forEach(function (compra) {
+          parseInt(compra[1])
+          monto_actualizado += parseInt(compra[1])
+        })
+        $('#main-gastado')[0].innerText = monto_actualizado
+        resto_actualizado = monto_base - monto_actualizado
+        $('#main-presupuesto-resto')[0].innerText = resto_actualizado
+
+        break
+
+
     }
 
     updateMonto()
@@ -2152,8 +2864,6 @@ $(document).ready(function () {
 
         break
 
-
-
       case $('#btn-screen-6').hasClass('screen-active'):
         let compras6
         $('.compras-list').empty()
@@ -2167,7 +2877,6 @@ $(document).ready(function () {
         localStorage.setItem('compras6', JSON.stringify(compras6))
 
         break
-
 
       case $('#btn-screen-7').hasClass('screen-active'):
         let compras7
@@ -2183,7 +2892,6 @@ $(document).ready(function () {
 
         break
 
-
       case $('#btn-screen-8').hasClass('screen-active'):
         let compras8
         $('.compras-list').empty()
@@ -2197,7 +2905,6 @@ $(document).ready(function () {
         localStorage.setItem('compras8', JSON.stringify(compras8))
 
         break
-
 
       case $('#btn-screen-9').hasClass('screen-active'):
         let compras9
@@ -2213,6 +2920,61 @@ $(document).ready(function () {
 
         break
 
+      case $('#btn-screen-10').hasClass('screen-active'):
+        let compras10
+        $('.compras-list').empty()
+
+        if (localStorage.getItem('compras10') === null) {
+          compras10 = []
+        } else {
+          compras10 = JSON.parse(localStorage.getItem('compras10'))
+        }
+        compras10 = []
+        localStorage.setItem('compras10', JSON.stringify(compras10))
+
+        break
+
+      case $('#btn-screen-11').hasClass('screen-active'):
+        let compras11
+        $('.compras-list').empty()
+
+        if (localStorage.getItem('compras11') === null) {
+          compras11 = []
+        } else {
+          compras11 = JSON.parse(localStorage.getItem('compras11'))
+        }
+        compras11 = []
+        localStorage.setItem('compras11', JSON.stringify(compras11))
+
+        break
+
+      case $('#btn-screen-12').hasClass('screen-active'):
+        let compras12
+        $('.compras-list').empty()
+
+        if (localStorage.getItem('compras12') === null) {
+          compras12 = []
+        } else {
+          compras12 = JSON.parse(localStorage.getItem('compras12'))
+        }
+        compras12 = []
+        localStorage.setItem('compras12', JSON.stringify(compras12))
+
+        break
+
+      case $('#btn-screen-13').hasClass('screen-active'):
+        let compras13
+        $('.compras-list').empty()
+
+        if (localStorage.getItem('compras13') === null) {
+          compras13 = []
+        } else {
+          compras13 = JSON.parse(localStorage.getItem('compras13'))
+        }
+        compras13 = []
+        localStorage.setItem('compras13', JSON.stringify(compras13))
+
+        break
     }
     getCompras()
   })
@@ -2346,6 +3108,62 @@ $(document).ready(function () {
         }
         compras9.push([compra, monto])
         localStorage.setItem('compras9', JSON.stringify(compras9))
+
+        break
+
+      case $('#btn-screen-10').hasClass('screen-active'):
+
+        let compras10
+
+        if (localStorage.getItem('compras10') === null) {
+          compras10 = []
+        } else {
+          compras10 = JSON.parse(localStorage.getItem('compras10'))
+        }
+        compras10.push([compra, monto])
+        localStorage.setItem('compras10', JSON.stringify(compras10))
+
+        break
+
+      case $('#btn-screen-11').hasClass('screen-active'):
+
+        let compras11
+
+        if (localStorage.getItem('compras11') === null) {
+          compras11 = []
+        } else {
+          compras11 = JSON.parse(localStorage.getItem('compras11'))
+        }
+        compras11.push([compra, monto])
+        localStorage.setItem('compras11', JSON.stringify(compras11))
+
+        break
+
+      case $('#btn-screen-12').hasClass('screen-active'):
+
+        let compras12
+
+        if (localStorage.getItem('compras12') === null) {
+          compras12 = []
+        } else {
+          compras12 = JSON.parse(localStorage.getItem('compras12'))
+        }
+        compras12.push([compra, monto])
+        localStorage.setItem('compras12', JSON.stringify(compras12))
+
+        break
+
+      case $('#btn-screen-13').hasClass('screen-active'):
+
+        let compras13
+
+        if (localStorage.getItem('compras13') === null) {
+          compras13 = []
+        } else {
+          compras13 = JSON.parse(localStorage.getItem('compras13'))
+        }
+        compras13.push([compra, monto])
+        localStorage.setItem('compras13', JSON.stringify(compras13))
 
         break
 
@@ -2544,7 +3362,8 @@ $(document).ready(function () {
 
       /* ////////////////////////////////////////////////////////////////// */
       /* CASE BOTON 3 */
-      /* ////////////////////////////////////////////////////////////////// */ case $('#btn-screen-3').hasClass('screen-active'):
+      /* ////////////////////////////////////////////////////////////////// */
+      case $('#btn-screen-3').hasClass('screen-active'):
         let compras3
         if (localStorage.getItem('compras3') === null) {
           compras3 = []
@@ -2634,7 +3453,6 @@ $(document).ready(function () {
       /* ////////////////////////////////////////////////////////////////// */
       /* CASE BOTON 4 */
       /* ////////////////////////////////////////////////////////////////// */
-
       case $('#btn-screen-4').hasClass('screen-active'):
         let compras4
         if (localStorage.getItem('compras4') === null) {
@@ -2901,7 +3719,6 @@ $(document).ready(function () {
         }
 
         break
-        
 
       /* ////////////////////////////////////////////////////////////////// */
       /* CASE BOTON 7 */
@@ -2992,7 +3809,6 @@ $(document).ready(function () {
         }
 
         break
-        
 
       /* ////////////////////////////////////////////////////////////////// */
       /* CASE BOTON 8 */
@@ -3083,7 +3899,6 @@ $(document).ready(function () {
         }
 
         break
-        
 
       /* ////////////////////////////////////////////////////////////////// */
       /* CASE BOTON 9 */
@@ -3174,6 +3989,367 @@ $(document).ready(function () {
         }
 
         break
+
+      /* ////////////////////////////////////////////////////////////////// */
+      /* CASE BOTON 10 */
+      /* ////////////////////////////////////////////////////////////////// */
+      case $('#btn-screen-10').hasClass('screen-active'):
+        let compras10
+        if (localStorage.getItem('compras10') === null) {
+          compras10 = []
+        } else {
+          compras10 = JSON.parse(localStorage.getItem('compras10'))
+        }
+        compras10.reverse()
+        compras10.forEach(function (compra, monto) {
+          // CREAR NUEVA COMPRA
+          const compraNueva = document.createElement('div')
+          compraNueva.classList.add('compra-nueva')
+          // CREAR NUEVO LI MONTO
+          const compraMonto = document.createElement('li')
+          compraMonto.innerText = compra[1]
+          if (compraMonto.innerText < 0) {
+            compraMonto.classList.add('numero-positivo')
+          } else {
+            compraMonto.classList.add('numero-negativo')
+          }
+          compraMonto.classList.add('compra-monto')
+          compraNueva.appendChild(compraMonto)
+          // CREAR NUEVO LI ITEM
+          const compraItem = document.createElement('li')
+          compraItem.innerText = compra[0]
+          compraItem.classList.add('compra-item')
+          compraNueva.appendChild(compraItem)
+          // CREAR NUEVO TRASH BUTTON
+          const trashButton = document.createElement('button')
+          trashButton.innerHTML = '<i class="fas fa-trash"></i>'
+          trashButton.classList.add('trash-btn')
+          compraNueva.appendChild(trashButton)
+          // COMPRA NUEVA COMO NUEVO ITEM EN LA LISTA
+          compras_list.appendChild(compraNueva)
+
+          updateMonto()
+
+          if (parseInt(resto) < 0) {
+            $('#main-presupuesto-resto').addClass('numero-negativo')
+            $('#main-presupuesto-resto').removeClass('numero-positivo')
+          } else {
+            $('#main-presupuesto-resto').addClass('numero-positivo')
+            $('#main-presupuesto-resto').removeClass('numero-negativo')
+          }
+          if (parseInt($('#main-gastado')[0].innerText) > 0) {
+            $('#main-gastado').addClass('numero-negativo')
+            $('#main-gastado').removeClass('numero-positivo')
+          } else {
+            $('#main-gastado').addClass('numero-positivo')
+            $('#main-gastado').removeClass('numero-negativo')
+          }
+
+        })
+
+        /* ////////////////////////////////////////////////////////////////// */
+        /* LOCAL STORAGE REFRESH SUMA TOTAL Y RESTO  */
+        compras10.forEach(function (compra) {
+          montoTotal += parseInt(compra[1])
+        })
+        $('#main-gastado')[0].innerText = montoTotal
+        let montoBase10
+        if (localStorage.getItem('montoBase10') === null) {
+          montoBase10 = []
+        } else {
+          montoBase10 = JSON.parse(localStorage.getItem('montoBase10'))
+        }
+        $('#main-presupuesto-resto')[0].innerText = parseInt(montoBase10 - $('#main-gastado')[0].innerText)
+
+        updateMonto()
+
+        if (parseInt(resto) < 0) {
+          $('#main-presupuesto-resto').addClass('numero-negativo')
+          $('#main-presupuesto-resto').removeClass('numero-positivo')
+        } else {
+          $('#main-presupuesto-resto').addClass('numero-positivo')
+          $('#main-presupuesto-resto').removeClass('numero-negativo')
+        }
+        if (parseInt($('#main-gastado')[0].innerText) > 0) {
+          $('#main-gastado').addClass('numero-negativo')
+          $('#main-gastado').removeClass('numero-positivo')
+        } else {
+          $('#main-gastado').addClass('numero-positivo')
+          $('#main-gastado').removeClass('numero-negativo')
+        }
+
+        break
+
+      /* ////////////////////////////////////////////////////////////////// */
+      /* CASE BOTON 11 */
+      /* ////////////////////////////////////////////////////////////////// */
+      case $('#btn-screen-11').hasClass('screen-active'):
+        let compras11
+        if (localStorage.getItem('compras11') === null) {
+          compras11 = []
+        } else {
+          compras11 = JSON.parse(localStorage.getItem('compras11'))
+        }
+        compras11.reverse()
+        compras11.forEach(function (compra, monto) {
+          // CREAR NUEVA COMPRA
+          const compraNueva = document.createElement('div')
+          compraNueva.classList.add('compra-nueva')
+          // CREAR NUEVO LI MONTO
+          const compraMonto = document.createElement('li')
+          compraMonto.innerText = compra[1]
+          if (compraMonto.innerText < 0) {
+            compraMonto.classList.add('numero-positivo')
+          } else {
+            compraMonto.classList.add('numero-negativo')
+          }
+          compraMonto.classList.add('compra-monto')
+          compraNueva.appendChild(compraMonto)
+          // CREAR NUEVO LI ITEM
+          const compraItem = document.createElement('li')
+          compraItem.innerText = compra[0]
+          compraItem.classList.add('compra-item')
+          compraNueva.appendChild(compraItem)
+          // CREAR NUEVO TRASH BUTTON
+          const trashButton = document.createElement('button')
+          trashButton.innerHTML = '<i class="fas fa-trash"></i>'
+          trashButton.classList.add('trash-btn')
+          compraNueva.appendChild(trashButton)
+          // COMPRA NUEVA COMO NUEVO ITEM EN LA LISTA
+          compras_list.appendChild(compraNueva)
+
+          updateMonto()
+
+          if (parseInt(resto) < 0) {
+            $('#main-presupuesto-resto').addClass('numero-negativo')
+            $('#main-presupuesto-resto').removeClass('numero-positivo')
+          } else {
+            $('#main-presupuesto-resto').addClass('numero-positivo')
+            $('#main-presupuesto-resto').removeClass('numero-negativo')
+          }
+          if (parseInt($('#main-gastado')[0].innerText) > 0) {
+            $('#main-gastado').addClass('numero-negativo')
+            $('#main-gastado').removeClass('numero-positivo')
+          } else {
+            $('#main-gastado').addClass('numero-positivo')
+            $('#main-gastado').removeClass('numero-negativo')
+          }
+
+        })
+
+        /* ////////////////////////////////////////////////////////////////// */
+        /* LOCAL STORAGE REFRESH SUMA TOTAL Y RESTO  */
+        compras11.forEach(function (compra) {
+          montoTotal += parseInt(compra[1])
+        })
+        $('#main-gastado')[0].innerText = montoTotal
+        let montoBase11
+        if (localStorage.getItem('montoBase11') === null) {
+          montoBase11 = []
+        } else {
+          montoBase11 = JSON.parse(localStorage.getItem('montoBase11'))
+        }
+        $('#main-presupuesto-resto')[0].innerText = parseInt(montoBase11 - $('#main-gastado')[0].innerText)
+
+        updateMonto()
+
+        if (parseInt(resto) < 0) {
+          $('#main-presupuesto-resto').addClass('numero-negativo')
+          $('#main-presupuesto-resto').removeClass('numero-positivo')
+        } else {
+          $('#main-presupuesto-resto').addClass('numero-positivo')
+          $('#main-presupuesto-resto').removeClass('numero-negativo')
+        }
+        if (parseInt($('#main-gastado')[0].innerText) > 0) {
+          $('#main-gastado').addClass('numero-negativo')
+          $('#main-gastado').removeClass('numero-positivo')
+        } else {
+          $('#main-gastado').addClass('numero-positivo')
+          $('#main-gastado').removeClass('numero-negativo')
+        }
+
+        break
+
+      /* ////////////////////////////////////////////////////////////////// */
+      /* CASE BOTON 12 */
+      /* ////////////////////////////////////////////////////////////////// */
+      case $('#btn-screen-12').hasClass('screen-active'):
+        let compras12
+        if (localStorage.getItem('compras12') === null) {
+          compras12 = []
+        } else {
+          compras12 = JSON.parse(localStorage.getItem('compras12'))
+        }
+        compras12.reverse()
+        compras12.forEach(function (compra, monto) {
+          // CREAR NUEVA COMPRA
+          const compraNueva = document.createElement('div')
+          compraNueva.classList.add('compra-nueva')
+          // CREAR NUEVO LI MONTO
+          const compraMonto = document.createElement('li')
+          compraMonto.innerText = compra[1]
+          if (compraMonto.innerText < 0) {
+            compraMonto.classList.add('numero-positivo')
+          } else {
+            compraMonto.classList.add('numero-negativo')
+          }
+          compraMonto.classList.add('compra-monto')
+          compraNueva.appendChild(compraMonto)
+          // CREAR NUEVO LI ITEM
+          const compraItem = document.createElement('li')
+          compraItem.innerText = compra[0]
+          compraItem.classList.add('compra-item')
+          compraNueva.appendChild(compraItem)
+          // CREAR NUEVO TRASH BUTTON
+          const trashButton = document.createElement('button')
+          trashButton.innerHTML = '<i class="fas fa-trash"></i>'
+          trashButton.classList.add('trash-btn')
+          compraNueva.appendChild(trashButton)
+          // COMPRA NUEVA COMO NUEVO ITEM EN LA LISTA
+          compras_list.appendChild(compraNueva)
+
+          updateMonto()
+
+          if (parseInt(resto) < 0) {
+            $('#main-presupuesto-resto').addClass('numero-negativo')
+            $('#main-presupuesto-resto').removeClass('numero-positivo')
+          } else {
+            $('#main-presupuesto-resto').addClass('numero-positivo')
+            $('#main-presupuesto-resto').removeClass('numero-negativo')
+          }
+          if (parseInt($('#main-gastado')[0].innerText) > 0) {
+            $('#main-gastado').addClass('numero-negativo')
+            $('#main-gastado').removeClass('numero-positivo')
+          } else {
+            $('#main-gastado').addClass('numero-positivo')
+            $('#main-gastado').removeClass('numero-negativo')
+          }
+
+        })
+
+        /* ////////////////////////////////////////////////////////////////// */
+        /* LOCAL STORAGE REFRESH SUMA TOTAL Y RESTO  */
+        compras12.forEach(function (compra) {
+          montoTotal += parseInt(compra[1])
+        })
+        $('#main-gastado')[0].innerText = montoTotal
+        let montoBase12
+        if (localStorage.getItem('montoBase12') === null) {
+          montoBase12 = []
+        } else {
+          montoBase12 = JSON.parse(localStorage.getItem('montoBase12'))
+        }
+        $('#main-presupuesto-resto')[0].innerText = parseInt(montoBase12 - $('#main-gastado')[0].innerText)
+
+        updateMonto()
+
+        if (parseInt(resto) < 0) {
+          $('#main-presupuesto-resto').addClass('numero-negativo')
+          $('#main-presupuesto-resto').removeClass('numero-positivo')
+        } else {
+          $('#main-presupuesto-resto').addClass('numero-positivo')
+          $('#main-presupuesto-resto').removeClass('numero-negativo')
+        }
+        if (parseInt($('#main-gastado')[0].innerText) > 0) {
+          $('#main-gastado').addClass('numero-negativo')
+          $('#main-gastado').removeClass('numero-positivo')
+        } else {
+          $('#main-gastado').addClass('numero-positivo')
+          $('#main-gastado').removeClass('numero-negativo')
+        }
+
+        break
+
+      /* ////////////////////////////////////////////////////////////////// */
+      /* CASE BOTON 13 */
+      /* ////////////////////////////////////////////////////////////////// */
+      case $('#btn-screen-13').hasClass('screen-active'):
+        let compras13
+        if (localStorage.getItem('compras13') === null) {
+          compras13 = []
+        } else {
+          compras13 = JSON.parse(localStorage.getItem('compras13'))
+        }
+        compras13.reverse()
+        compras13.forEach(function (compra, monto) {
+          // CREAR NUEVA COMPRA
+          const compraNueva = document.createElement('div')
+          compraNueva.classList.add('compra-nueva')
+          // CREAR NUEVO LI MONTO
+          const compraMonto = document.createElement('li')
+          compraMonto.innerText = compra[1]
+          if (compraMonto.innerText < 0) {
+            compraMonto.classList.add('numero-positivo')
+          } else {
+            compraMonto.classList.add('numero-negativo')
+          }
+          compraMonto.classList.add('compra-monto')
+          compraNueva.appendChild(compraMonto)
+          // CREAR NUEVO LI ITEM
+          const compraItem = document.createElement('li')
+          compraItem.innerText = compra[0]
+          compraItem.classList.add('compra-item')
+          compraNueva.appendChild(compraItem)
+          // CREAR NUEVO TRASH BUTTON
+          const trashButton = document.createElement('button')
+          trashButton.innerHTML = '<i class="fas fa-trash"></i>'
+          trashButton.classList.add('trash-btn')
+          compraNueva.appendChild(trashButton)
+          // COMPRA NUEVA COMO NUEVO ITEM EN LA LISTA
+          compras_list.appendChild(compraNueva)
+
+          updateMonto()
+
+          if (parseInt(resto) < 0) {
+            $('#main-presupuesto-resto').addClass('numero-negativo')
+            $('#main-presupuesto-resto').removeClass('numero-positivo')
+          } else {
+            $('#main-presupuesto-resto').addClass('numero-positivo')
+            $('#main-presupuesto-resto').removeClass('numero-negativo')
+          }
+          if (parseInt($('#main-gastado')[0].innerText) > 0) {
+            $('#main-gastado').addClass('numero-negativo')
+            $('#main-gastado').removeClass('numero-positivo')
+          } else {
+            $('#main-gastado').addClass('numero-positivo')
+            $('#main-gastado').removeClass('numero-negativo')
+          }
+
+        })
+
+        /* ////////////////////////////////////////////////////////////////// */
+        /* LOCAL STORAGE REFRESH SUMA TOTAL Y RESTO  */
+        compras13.forEach(function (compra) {
+          montoTotal += parseInt(compra[1])
+        })
+        $('#main-gastado')[0].innerText = montoTotal
+        let montoBase13
+        if (localStorage.getItem('montoBase13') === null) {
+          montoBase13 = []
+        } else {
+          montoBase13 = JSON.parse(localStorage.getItem('montoBase13'))
+        }
+        $('#main-presupuesto-resto')[0].innerText = parseInt(montoBase13 - $('#main-gastado')[0].innerText)
+
+        updateMonto()
+
+        if (parseInt(resto) < 0) {
+          $('#main-presupuesto-resto').addClass('numero-negativo')
+          $('#main-presupuesto-resto').removeClass('numero-positivo')
+        } else {
+          $('#main-presupuesto-resto').addClass('numero-positivo')
+          $('#main-presupuesto-resto').removeClass('numero-negativo')
+        }
+        if (parseInt($('#main-gastado')[0].innerText) > 0) {
+          $('#main-gastado').addClass('numero-negativo')
+          $('#main-gastado').removeClass('numero-positivo')
+        } else {
+          $('#main-gastado').addClass('numero-positivo')
+          $('#main-gastado').removeClass('numero-negativo')
+        }
+
+        break
+
     }
   }
 })

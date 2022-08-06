@@ -263,6 +263,34 @@ body {
   padding: 0;
 }
 
+#btn-screen-10 {
+  top: 2.3rem;
+  left: 3.1rem;
+  font-size: 1.6rem;
+  padding: 0;
+}
+
+#btn-screen-11 {
+  top: 4.9rem;
+  left: 3.1rem;
+  font-size: 1.6rem;
+  padding: 0;
+}
+
+#btn-screen-12 {
+  top: 7.5rem;
+  left: 3.1rem;
+  font-size: 1.6rem;
+  padding: 0;
+}
+
+#btn-screen-13 {
+  top: 10.1rem;
+  left: 3.1rem;
+  font-size: 1.6rem;
+  padding: 0;
+}
+
 /* ////////////////////////////////////////////////////////////////// */
 /* SCREEN ACTIVE MODAL */
 /* ////////////////////////////////////////////////////////////////// */
